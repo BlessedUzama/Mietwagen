@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.5.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.43.0",
@@ -21,7 +22,7 @@
     "react-dom": "^19.2.8",
     "react-i18next": "^17.0.11",
     "tailwind-merge": "^3.6.0",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
