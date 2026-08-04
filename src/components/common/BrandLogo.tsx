@@ -9,7 +9,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', showText =
   return (
     <div className={`inline-flex items-center gap-3 group cursor-pointer ${className}`}>
       {/* SVG Vector Crest Symbol */}
-      <div className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-900 shadow-glow-blue border border-blue-400/30 group-hover:scale-105 transition-transform duration-300">
+      <div className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 via-blue-600 to-slate-900 shadow-glow-indigo border border-indigo-400/30 group-hover:scale-105 transition-transform duration-300">
         <svg
           viewBox="0 0 40 40"
           fill="none"
@@ -28,15 +28,15 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', showText =
           {/* Stylized Speed/Vehicle Curve */}
           <path
             d="M13 22C15.5 17.5 24.5 17.5 27 22"
-            stroke="url(#blue_gradient)"
+            stroke="url(#indigo_gradient)"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
           {/* Crown/Star Accent */}
-          <circle cx="20" cy="13" r="2" fill="#2563EB" />
+          <circle cx="20" cy="13" r="2" fill="#6366F1" />
           <defs>
-            <linearGradient id="blue_gradient" x1="13" y1="20" x2="27" y2="20" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#60A5FA" />
+            <linearGradient id="indigo_gradient" x1="13" y1="20" x2="27" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#818CF8" />
               <stop offset="1" stopColor="#3B82F6" />
             </linearGradient>
           </defs>
@@ -48,7 +48,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', showText =
           <span className="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white leading-none">
             OBAZEE CLEMENT
           </span>
-          <span className="text-[10px] font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase leading-snug mt-0.5">
+          <span className="text-[10px] font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase leading-snug mt-0.5">
             MIETWAGEN
           </span>
         </div>

@@ -8,24 +8,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          dark: '#0B0F17',
-          surface: '#151D2A',
-          card: '#1E293B',
-          accent: '#2563EB',
-          accentHover: '#1D4ED8',
+        cyber: {
+          bgDark: '#070A11',
+          cardDark: '#0F172A',
+          borderDark: 'rgba(255, 255, 255, 0.08)',
+          bgLight: '#FAFAFC',
+          cardLight: '#FFFFFF',
+          borderLight: '#E2E8F0',
+          accent: '#3B82F6',
+          indigo: '#6366F1',
+          cyan: '#06B6D4',
           whatsapp: '#10B981',
           whatsappHover: '#059669',
-          gold: '#F59E0B',
         }
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
       },
       boxShadow: {
-        'glow-blue': '0 0 25px -5px rgba(37, 99, 235, 0.4)',
-        'glow-green': '0 0 25px -5px rgba(16, 185, 129, 0.4)',
-        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        'glow-cyber': '0 0 30px -5px rgba(59, 130, 246, 0.45)',
+        'glow-indigo': '0 0 30px -5px rgba(99, 102, 241, 0.45)',
+        'glow-whatsapp': '0 0 30px -5px rgba(16, 185, 129, 0.5)',
+        'glass-dark': '0 20px 50px rgba(0, 0, 0, 0.5)',
+        'glass-light': '0 20px 40px rgba(15, 23, 42, 0.08)',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

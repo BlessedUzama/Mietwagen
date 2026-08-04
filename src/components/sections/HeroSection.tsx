@@ -7,7 +7,7 @@ import { AnimatedGradientText } from '../ui/AnimatedGradientText';
 import { ShinyBordersButton } from '../ui/ShinyBordersButton';
 
 interface HeroSectionProps {
-  children?: React.ReactNode; // Slot for Ride Estimator Card
+  children?: React.ReactNode;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Premium Value Proposition */}
+          {/* Left Column: Value Proposition */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,8 +28,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             className="lg:col-span-7 space-y-6 text-left"
           >
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-400/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold tracking-wide uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-blue-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 dark:bg-indigo-400/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400 animate-pulse" />
               <span>{t('hero.badge')}</span>
             </div>
 
@@ -40,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
               <AnimatedGradientText>{t('hero.titleSubline')}</AnimatedGradientText>
             </h1>
 
-            {/* Subtitle Copy - Strictly Private Ride-Hailing / Mietwagen */}
+            {/* Subtitle Copy */}
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl">
               {t('hero.subtitle')}
             </p>
@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
                 <span>Festpreise ohne Aufschlag</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-                <Zap className="w-4 h-4 text-blue-500 shrink-0" />
+                <Zap className="w-4 h-4 text-indigo-500 shrink-0" />
                 <span>Direkter WhatsApp Kontakt</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
@@ -63,6 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
 
             {/* Hero CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
+              {/* WhatsApp Mandatory Emerald CTA */}
               <a
                 href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20in%20Frankfurt%20anfragen."
                 target="_blank"
@@ -73,8 +74,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
                 </ShinyBordersButton>
               </a>
 
+              {/* Direct Call Button */}
               <a href="tel:015210236967">
-                <ShinyBordersButton variant="outline" size="lg" icon={<Phone className="w-5 h-5 text-blue-500" />}>
+                <ShinyBordersButton variant="outline" size="lg" icon={<Phone className="w-5 h-5 text-indigo-500 dark:text-indigo-400" />}>
                   0152 10236967
                 </ShinyBordersButton>
               </a>
@@ -82,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
 
             {/* Service Locations Strip */}
             <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 pt-3">
-              <MapPin className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
               <span>Beliebte Ziele: Flughafen FRA • Messe Frankfurt • Hauptbahnhof • Hoteltransfer</span>
             </div>
           </motion.div>
@@ -94,20 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
             className="lg:col-span-5 w-full"
           >
-            {children ? (
-              children
-            ) : (
-              /* Fallback Preview Placeholder until Estimator component is added */
-              <div className="p-8 rounded-3xl bg-slate-900/90 dark:bg-slate-900/90 border border-slate-800 backdrop-blur-2xl shadow-2xl text-left space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold text-white">{t('hero.bookingCardTitle')}</h3>
-                  <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
-                    Live
-                  </span>
-                </div>
-                <p className="text-sm text-slate-400">{t('hero.bookingCardSub')}</p>
-              </div>
-            )}
+            {children}
           </motion.div>
         </div>
       </div>
