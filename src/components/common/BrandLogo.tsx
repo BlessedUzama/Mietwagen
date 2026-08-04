@@ -49,7 +49,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', showText =
             OBAZEE CLEMENT
           </span>
           <span className="text-[10px] font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase leading-snug mt-0.5">
-            MIETWAGEN FRANKFURT
+            MIETWAGEN
           </span>
         </div>
       )}
