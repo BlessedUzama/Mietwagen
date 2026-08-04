@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "brandName": "Obazee Clement",
+    "brandSub": "Mietwagen Frankfurt",
+    "home": "Startseite",
+    "advantages": "Vorteile",
+    "fleet": "Fahrzeuge",
+    "calculator": "Fahrpreisrechner",
+    "location": "Standort",
+    "contact": "Kontakt",
+    "callNow": "Jetzt Anrufen",
+    "whatsappRide": "WhatsApp Buchung"
+  },
+  "hero": {
+    "badge": "Ihr Persöhnlicher Fahrdienst in Frankfurt & Umgebung",
+    "titleHeadline": "Erstklassiger Fahrdienst.",
+    "titleSubline": "Direkt. Verlässlich. Transparent.",
+    "subtitle": "Keine Algorithmen, keine versteckten Gebühren. Erleben Sie den Komfort Ihres persönlichen Mietwagen-Service in Frankfurt am Main – buchen Sie direkt bei Obazee Clement via WhatsApp.",
+    "bookingCardTitle": "Wohin soll es gehen?",
+    "bookingCardSub": "Sofortige Schätzung & WhatsApp Buchung",
+    "pickupLabel": "Abholort",
+    "pickupPlaceholder": "z.B. Frankfurt Hbf, Hotel, Adresse",
+    "dropoffLabel": "Zielort",
+    "dropoffPlaceholder": "z.B. Flughafen Frankfurt (FRA), Messe",
+    "dateLabel": "Datum & Uhrzeit",
+    "vehicleLabel": "Fahrzeugklasse",
+    "estimatedFare": "Geschätzter Festpreis",
+    "fixedPriceBadge": "Garantiert fixer Preis ohne Aufschlag",
+    "ctaWhatsApp": "Fahrt via WhatsApp anfragen",
+    "ctaCall": "Direkt anrufen (015210236967)",
+    "quickLocations": {
+      "airport": "Flughafen FRA",
+      "hbf": "Hauptbahnhof",
+      "messe": "Messe Frankfurt",
+      "hotel": "Hoteltransfer"
+    }
+  },
+  "advantages": {
+    "tagline": "Warum Obazee Clement Mietwagen?",
+    "title": "Der Vorteil eines persönlichen Fahrdienstes",
+    "description": "Im Gegensatz zu anonymen Vermittlungs-Apps genießen Sie bei uns direkten Kontakt zum Fahrer, maximale Termintreue und transparente Festpreise.",
+    "card1Title": "Persönlicher Fahrer",
+    "card1Desc": "Direkte Kommunikation ohne Zwischenhändler. Ihr Fahrer Obazee Clement ist pünktlich, diskret und kundenorientiert.",
+    "card2Title": "Feste Transparentpreise",
+    "card2Desc": "Keine dynamischen Preise bei Stau oder Regen. Sie erfahren Ihren exakten Fahrpreis vor Antritt der Fahrt.",
+    "card3Title": "Gepflegte Premium-Flotte",
+    "card3Desc": "Saubere, klimatisierte und Nichtraucher-Fahrzeuge mit höchstem Sicherheits- und Komfortstandard.",
+    "card4Title": "24/7 Frankfurt Service",
+    "card4Desc": "Zuverlässige Fahrten rund um die Uhr für Flughafen-Transfers, Messebesuche, Hotel-Shuttles und Geschäftsreisen."
+  },
+  "fleet": {
+    "tagline": "Fahrzeugklassen & Tarife",
+    "title": "Wählen Sie Ihre passende Klasse",
+    "subtitle": "Von komfortablen Limousinen bis zum geräumigen Großraumvan für Gruppen und Gepäck.",
+    "seats": "Sitzplätze",
+    "luggage": "Koffer",
+    "features": "Ausstattung",
+    "requestThisClass": "Diese Klasse wählen",
+    "comfort": {
+      "title": "Comfort Sedan",
+      "desc": "Perfekt für Einzelfahrten, Hoteltransfers und City-Touren in Frankfurt.",
+      "features": ["Klimaanlage", "WLAN an Bord", "Mineralwasser inklusive", "Ladekabel für Smartphones"]
+    },
+    "executive": {
+      "title": "Executive Business",
+      "desc": "Oberklasse-Komfort für Geschäftsreisende, VIPs und Messebesucher.",
+      "features": ["Lederausstattung", "Extra Beinfreiheit", "Flüsterleiser Innenraum", "Priority-Check-in Support"]
+    },
+    "van": {
+      "title": "Group & Business Van",
+      "desc": "Großzügiges Raumangebot für Gruppen, Familien und viel Gepäck.",
+      "features": ["Bis zu 7 Fahrgäste", "Großer Kofferraum", "Ideal für Flughafentransfer", "Klimaautomatik hinten"]
+    }
+  },
+  "calculator": {
+    "title": "Interaktiver Fahrpreisrechner",
+    "subtitle": "Berechnen Sie Ihren Festpreis für die beliebtesten Strecken in Frankfurt am Main.",
+    "from": "Von",
+    "to": "Nach",
+    "distance": "Ca. Distanz",
+    "duration": "Geschätzte Fahrzeit",
+    "estimatedPrice": "Ihr Festpreis",
+    "bookNow": "Fahrt für diesen Preis buchen"
+  },
+  "location": {
+    "tagline": "Standort & Abdeckungsbereich",
+    "title": "Ihr Partner in Frankfurt am Main",
+    "addressTitle": "Firmensitz",
+    "addressText": "Rötgenstr. 7-9, 60388 Frankfurt am Main, Deutschland",
+    "serviceAreaTitle": "Einsatzgebiete",
+    "serviceAreaText": "Frankfurt am Main, Flughafen Frankfurt (FRA), Messe Frankfurt, Offenbach, Hanau, Bad Homburg und gesamtes Rhein-Main-Gebiet.",
+    "phone1": "Telefon 1 (Hauptnummer)",
+    "phone2": "Telefon 2 (Zusatznummer)",
+    "hoursTitle": "Erreichbarkeit",
+    "hoursText": "24 Stunden / 7 Tage die Woche auf Anfrage"
+  },
+  "contact": {
+    "tagline": "Direkter Kontakt",
+    "title": "Buchen Sie Ihre Fahrt in Sekunden",
+    "subtitle": "Am schnellsten erreichen Sie Obazee Clement direkt per WhatsApp oder Anruf.",
+    "whatsappBtn": "WhatsApp Chat Starten (015210236967)",
+    "callBtn1": "Anrufen: 0152 10236967",
+    "callBtn2": "Anrufen: 0157 51633765",
+    "fastResponse": "Durchschnittliche Antwortzeit: unter 5 Minuten"
+  },
+  "seo": {
+    "metaTitle": "Obazee Clement Mietwagen Frankfurt | Privater Fahrdienst & Flughafentransfer",
+    "metaDescription": "Erstklassiger privater Fahrdienst & Mietwagen in Frankfurt am Main. Flughafentransfer, Messe Frankfurt Shuttle & Geschäftsreisen zum Festpreis. Jetzt direkt via WhatsApp buchen!"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main"
+  }
+}

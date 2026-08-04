@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "brandName": "Obazee Clement",
+    "brandSub": "Private Hire Frankfurt",
+    "home": "Home",
+    "advantages": "Advantages",
+    "fleet": "Fleet",
+    "calculator": "Fare Estimator",
+    "location": "Location",
+    "contact": "Contact",
+    "callNow": "Call Now",
+    "whatsappRide": "WhatsApp Booking"
+  },
+  "hero": {
+    "badge": "Your Premium Private Chauffeur & Ride Service in Frankfurt",
+    "titleHeadline": "First-Class Private Ride Service.",
+    "titleSubline": "Direct. Reliable. Transparent.",
+    "subtitle": "No algorithms, no surprise surge fees. Experience the comfort of your personal ride service in Frankfurt am Main – book directly with Obazee Clement via WhatsApp.",
+    "bookingCardTitle": "Where to?",
+    "bookingCardSub": "Instant fare calculation & WhatsApp booking",
+    "pickupLabel": "Pickup Location",
+    "pickupPlaceholder": "e.g. Frankfurt Main Station, Hotel, Address",
+    "dropoffLabel": "Destination",
+    "dropoffPlaceholder": "e.g. Frankfurt Airport (FRA), Exhibition Center",
+    "dateLabel": "Date & Time",
+    "vehicleLabel": "Vehicle Class",
+    "estimatedFare": "Estimated Fixed Fare",
+    "fixedPriceBadge": "Guaranteed fixed price with no hidden costs",
+    "ctaWhatsApp": "Request Ride via WhatsApp",
+    "ctaCall": "Call Driver Direct (015210236967)",
+    "quickLocations": {
+      "airport": "Frankfurt Airport (FRA)",
+      "hbf": "Main Station",
+      "messe": "Messe Frankfurt",
+      "hotel": "Hotel Transfer"
+    }
+  },
+  "advantages": {
+    "tagline": "Why Choose Obazee Clement Private Ride?",
+    "title": "The Advantage of a Personal Driver",
+    "description": "Unlike anonymous hailing apps, you enjoy direct driver contact, punctual arrivals, and guaranteed fixed prices.",
+    "card1Title": "Personal Driver",
+    "card1Desc": "Direct communication without middleman delays. Your driver Obazee Clement is always punctual, professional, and courteous.",
+    "card2Title": "Fixed Transparent Rates",
+    "card2Desc": "No surge pricing during peak hours, traffic, or rain. Know your exact fixed price before your trip begins.",
+    "card3Title": "Pristine Premium Fleet",
+    "card3Desc": "Spotless, air-conditioned, non-smoking vehicles maintained to the highest safety and luxury standards.",
+    "card4Title": "24/7 Frankfurt Service",
+    "card4Desc": "Round-the-clock availability for Frankfurt Airport transfers, trade fairs, hotel shuttles, and executive travel."
+  },
+  "fleet": {
+    "tagline": "Vehicle Classes & Rates",
+    "title": "Choose Your Perfect Ride Tier",
+    "subtitle": "From comfortable executive sedans to spacious group vans accommodating passengers and heavy luggage.",
+    "seats": "Seats",
+    "luggage": "Luggage",
+    "features": "Features",
+    "requestThisClass": "Select This Class",
+    "comfort": {
+      "title": "Comfort Sedan",
+      "desc": "Ideal for individual rides, city transfers, and hotel pickups across Frankfurt.",
+      "features": ["Air Conditioning", "On-board Wi-Fi", "Complimentary Water", "Smartphone Charging Cables"]
+    },
+    "executive": {
+      "title": "Executive Business",
+      "desc": "First-class comfort tailored for business travelers, VIPs, and trade fair delegates.",
+      "features": ["Leather Interior", "Extra Legroom", "Whisper-quiet Cabin", "Priority Pickup Support"]
+    },
+    "van": {
+      "title": "Group & Business Van",
+      "desc": "Generous space for groups, families, corporate teams, and extensive luggage.",
+      "features": ["Up to 7 Passengers", "Spacious Trunk", "Ideal for Airport Transfers", "Rear Climate Control"]
+    }
+  },
+  "calculator": {
+    "title": "Interactive Fare Estimator",
+    "subtitle": "Calculate your fixed fare for popular destinations in Frankfurt am Main.",
+    "from": "From",
+    "to": "To",
+    "distance": "Est. Distance",
+    "duration": "Est. Travel Time",
+    "estimatedPrice": "Your Fixed Price",
+    "bookNow": "Book Ride For This Price"
+  },
+  "location": {
+    "tagline": "Location & Service Area",
+    "title": "Your Trusted Partner in Frankfurt",
+    "addressTitle": "Headquarters",
+    "addressText": "Rötgenstr. 7-9, 60388 Frankfurt am Main, Germany",
+    "serviceAreaTitle": "Service Coverage",
+    "serviceAreaText": "Frankfurt am Main, Frankfurt Airport (FRA), Messe Frankfurt, Offenbach, Hanau, Bad Homburg, and the entire Rhine-Main area.",
+    "phone1": "Phone 1 (Primary)",
+    "phone2": "Phone 2 (Secondary)",
+    "hoursTitle": "Availability",
+    "hoursText": "24 Hours / 7 Days a week upon request"
+  },
+  "contact": {
+    "tagline": "Direct Contact",
+    "title": "Book Your Ride in Seconds",
+    "subtitle": "The fastest way to book is directly contacting Obazee Clement via WhatsApp or phone call.",
+    "whatsappBtn": "Start WhatsApp Chat (015210236967)",
+    "callBtn1": "Call: 0152 10236967",
+    "callBtn2": "Call: 0157 51633765",
+    "fastResponse": "Average response time: under 5 minutes"
+  },
+  "seo": {
+    "metaTitle": "Obazee Clement Mietwagen Frankfurt | Private Hire & Airport Transfer",
+    "metaDescription": "Premium private ride service & hire car in Frankfurt am Main. Airport transfer, Messe Frankfurt shuttle & business travel at fixed prices. Book directly via WhatsApp!"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main"
+  }
+}
