@@ -18,18 +18,18 @@ export const Footer: React.FC = () => {
               <BrandLogo showText={true} />
             </Link>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pt-2">
-              Ihr persönlicher Mietwagen-Fahrdienst in Frankfurt am Main. Erstklassiger Fahrkomfort, pünktlicher Flughafentransfer und garantierte Festpreise ohne versteckte Gebühren.
+              {t('footer.tagline')}
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Geprüfter Mietwagen-Konzessionsinhaber</span>
+              <span>{t('footer.verifiedBadge')}</span>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4 text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200">
-              Navigation
+              {t('footer.navTitle')}
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -46,13 +46,13 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="/#how-it-works" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
-                  <span>So funktioniert's</span>
+                  <span>{t('footer.howItWorks')}</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
                 <a href="/#faq" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
-                  <span>Häufige Fragen (FAQ)</span>
+                  <span>{t('footer.faq')}</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
           {/* Column 3: Contact & Direct WhatsApp */}
           <div className="space-y-4 text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200">
-              Kontakt & Buchung
+              {t('footer.contactTitle')}
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
@@ -79,12 +79,12 @@ export const Footer: React.FC = () => {
                   className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200 flex items-center gap-2"
                 >
                   <MessageSquare className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>WhatsApp Chat Starten</span>
+                  <span>{t('footer.whatsappChat')}</span>
                 </a>
               </li>
               <li className="flex items-start gap-2 pt-1 text-xs text-slate-600 dark:text-slate-400">
                 <MapPin className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
-                <span>Rötgenstr. 7-9, 60388 Frankfurt am Main</span>
+                <span>{t('footer.address')}</span>
               </li>
             </ul>
           </div>
@@ -92,13 +92,13 @@ export const Footer: React.FC = () => {
           {/* Column 4: Service Coverage Area */}
           <div className="space-y-4 text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200">
-              Einsatzgebiet
+              {t('footer.areaTitle')}
             </h4>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Flughafen Frankfurt (FRA Terminals 1 & 2), Messe Frankfurt, Hauptbahnhof, Offenbach, Hanau, Bad Homburg & gesamtes Rhein-Main-Gebiet.
+              {t('footer.areaText')}
             </p>
             <div className="pt-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
-              <span>Erreichbarkeit: 24/7 nach Vereinbarung</span>
+              <span>{t('footer.availability')}</span>
             </div>
           </div>
         </div>

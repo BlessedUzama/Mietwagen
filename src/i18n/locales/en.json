@@ -204,10 +204,20 @@
     "metaDescription": "Premium private ride service & hire car in Frankfurt am Main. Airport transfer, Messe Frankfurt shuttle & business travel at fixed prices. Book directly via WhatsApp!"
   },
   "footer": {
+    "tagline": "Your personal ride service in Frankfurt am Main. Premium driving comfort, punctual airport transfers, and guaranteed fixed prices without hidden fees.",
+    "verifiedBadge": "Licensed Private Ride Operator",
+    "navTitle": "Navigation",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contactTitle": "Contact & Booking",
+    "whatsappChat": "Start WhatsApp Chat",
+    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main",
+    "areaTitle": "Service Coverage",
+    "areaText": "Frankfurt Airport (FRA Terminals 1 & 2), Messe Frankfurt, Main Station, Offenbach, Hanau, Bad Homburg & entire Rhine-Main region.",
+    "availability": "Availability: 24/7 by appointment",
     "rights": "All rights reserved.",
-    "imprint": "Imprint",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main"
+    "imprint": "Legal Notice (Impressum)",
+    "privacy": "Privacy Policy (GDPR)",
+    "terms": "Terms & Conditions"
   }
 }

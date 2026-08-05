@@ -204,10 +204,20 @@
     "metaDescription": "Erstklassiger privater Fahrdienst & Mietwagen in Frankfurt am Main. Flughafentransfer, Messe Frankfurt Shuttle & Geschäftsreisen zum Festpreis. Jetzt direkt via WhatsApp buchen!"
   },
   "footer": {
+    "tagline": "Ihr persönlicher Mietwagen-Fahrdienst in Frankfurt am Main. Erstklassiger Fahrkomfort, pünktlicher Flughafentransfer und garantierte Festpreise ohne versteckte Gebühren.",
+    "verifiedBadge": "Geprüfter Mietwagen-Konzessionsinhaber",
+    "navTitle": "Navigation",
+    "howItWorks": "So funktioniert's",
+    "faq": "Häufige Fragen (FAQ)",
+    "contactTitle": "Kontakt & Buchung",
+    "whatsappChat": "WhatsApp Chat Starten",
+    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main",
+    "areaTitle": "Einsatzgebiet",
+    "areaText": "Flughafen Frankfurt (FRA Terminals 1 & 2), Messe Frankfurt, Hauptbahnhof, Offenbach, Hanau, Bad Homburg & gesamtes Rhein-Main-Gebiet.",
+    "availability": "Erreichbarkeit: 24/7 nach Vereinbarung",
     "rights": "Alle Rechte vorbehalten.",
-    "imprint": "Impressum",
-    "privacy": "Datenschutz",
-    "terms": "AGB",
-    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main"
+    "imprint": "Impressum (§ 5 DDG)",
+    "privacy": "Datenschutzerklärung (DSGVO)",
+    "terms": "AGB"
   }
 }
