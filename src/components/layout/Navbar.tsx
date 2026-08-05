@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Phone, Menu, X, Globe, MessageSquare } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
@@ -14,12 +15,12 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#home', label: t('nav.home') },
-    { href: '#advantages', label: t('nav.advantages') },
-    { href: '#fleet', label: t('nav.fleet') },
-    { href: '#calculator', label: t('nav.calculator') },
-    { href: '#location', label: t('nav.location') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: '/#home', label: t('nav.home') },
+    { href: '/#advantages', label: t('nav.advantages') },
+    { href: '/#fleet', label: t('nav.fleet') },
+    { href: '/#calculator', label: t('nav.calculator') },
+    { href: '/#location', label: t('nav.location') },
+    { href: '/#contact', label: t('nav.contact') },
   ];
 
   return (
@@ -27,9 +28,9 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <BrandLogo />
-          </a>
+          </Link>
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-8">

@@ -146,6 +146,32 @@
     "q5": "Can I cancel or change my booking at short notice?",
     "a5": "You can change or cancel your booking easily and free of charge directly via WhatsApp up to 2 hours before pickup."
   },
+  "impressum": {
+    "title": "Imprint (Legal Notice)",
+    "subtitle": "Information pursuant to § 5 German Digital Services Act (DDG)",
+    "providerTitle": "Service Provider",
+    "providerName": "Obazee Clement Mietwagen",
+    "addressTitle": "Headquarters & Address",
+    "address": "Rötgenstr. 7-9, 60388 Frankfurt am Main, Germany",
+    "contactTitle": "Contact Information",
+    "phone": "Phone: 0152 10236967 / 0157 51633765",
+    "email": "info@obazee-mietwagen.de",
+    "licenseTitle": "Licensing & Regulatory Authority",
+    "licenseText": "Commercial passenger transport authorization pursuant to § 49 PBefG (Passenger Transport Act). Competent supervisory authority: City of Frankfurt am Main – Public Order Office.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "The contents of our website were created with the utmost care. However, we cannot guarantee the accuracy, completeness, or topicality of the contents."
+  },
+  "datenschutz": {
+    "title": "Privacy Policy",
+    "subtitle": "Information on the processing of personal data under GDPR",
+    "overviewTitle": "Data Protection Overview",
+    "overviewText": "We take the protection of your personal data very seriously. Personal data is handled confidentially and in accordance with statutory data protection regulations (GDPR).",
+    "responsibleTitle": "Responsible Controller",
+    "whatsappTitle": "Contact & Booking via WhatsApp",
+    "whatsappText": "When contacting us via WhatsApp, your transmitted ride details are processed exclusively to fulfill your booking. Data is not shared with third parties.",
+    "rightsTitle": "Your Data Rights",
+    "rightsText": "You have the right at any time to receive free information about your stored personal data, as well as a right to correction, blocking, or deletion."
+  },
   "calculator": {
     "title": "Interactive Fare Estimator",
     "subtitle": "Calculate your fixed fare for popular destinations in Frankfurt am Main.",

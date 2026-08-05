@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, MessageSquare, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import { BrandLogo } from '../common/BrandLogo';
 
@@ -13,7 +14,9 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-200 dark:border-slate-800/80">
           {/* Column 1: Brand & Trust Tagline */}
           <div className="space-y-4 text-left">
-            <BrandLogo showText={true} />
+            <Link to="/">
+              <BrandLogo showText={true} />
+            </Link>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pt-2">
               Ihr persönlicher Mietwagen-Fahrdienst in Frankfurt am Main. Erstklassiger Fahrkomfort, pünktlicher Flughafentransfer und garantierte Festpreise ohne versteckte Gebühren.
             </p>
@@ -30,25 +33,25 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#home" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
+                <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
                   <span>{t('nav.home')}</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#fleet" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
+                <a href="/#fleet" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
                   <span>{t('nav.fleet')}</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
+                <a href="/#how-it-works" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
                   <span>So funktioniert's</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
+                <a href="/#faq" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 group">
                   <span>Häufige Fragen (FAQ)</span>
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
@@ -104,9 +107,8 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <p>© 2026 Obazee Clement Mietwagen. {t('footer.rights')}</p>
           <div className="flex items-center gap-6">
-            <a href="#imprint" className="hover:text-slate-900 dark:hover:text-slate-200 transition-colors">{t('footer.imprint')}</a>
-            <a href="#privacy" className="hover:text-slate-900 dark:hover:text-slate-200 transition-colors">{t('footer.privacy')}</a>
-            <a href="#terms" className="hover:text-slate-900 dark:hover:text-slate-200 transition-colors">{t('footer.terms')}</a>
+            <Link to="/impressum" className="hover:text-slate-900 dark:hover:text-slate-200 transition-colors">{t('footer.imprint')}</Link>
+            <Link to="/datenschutz" className="hover:text-slate-900 dark:hover:text-slate-200 transition-colors">{t('footer.privacy')}</Link>
           </div>
         </div>
       </div>

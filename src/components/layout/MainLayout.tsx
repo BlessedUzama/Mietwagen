@@ -1,19 +1,15 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
+import { Navbar } from './Navbar';
+import { Footer } from './Footer';
+import { FloatingWhatsApp } from '../common/FloatingWhatsApp';
 
 interface MainLayoutProps {
-  children: React.ReactNode;
-  navbar?: React.ReactNode;
-  footer?: React.ReactNode;
-  floatingWidget?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-export const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  navbar,
-  footer,
-  floatingWidget,
-}) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const { theme } = useTheme();
 
   return (
@@ -27,16 +23,24 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       <div className="fixed bottom-0 right-0 w-96 h-96 bg-emerald-500/5 dark:bg-emerald-500/10 blur-[140px] pointer-events-none z-0" />
 
       {/* Sticky Header Navigation */}
-      {navbar && <header className="sticky top-0 z-50">{navbar}</header>}
+      <header className="sticky top-0 z-50">
+        <Navbar />
+      </header>
 
-      {/* Main Page Content Container */}
-      <main className="flex-1 z-10 relative">{children}</main>
+      {/* Main Page Content Area - Renders Route Outlet or Children */}
+      <main className="flex-1 z-10 relative">
+        {children || <Outlet />}
+      </main>
 
-      {/* Floating Action Elements (e.g., WhatsApp Widget) */}
-      {floatingWidget && <aside className="z-40 relative">{floatingWidget}</aside>}
+      {/* Floating Action Elements (WhatsApp Widget) */}
+      <aside className="z-40 relative">
+        <FloatingWhatsApp />
+      </aside>
 
       {/* Footer Section */}
-      {footer && <footer className="z-10 relative mt-auto">{footer}</footer>}
+      <footer className="z-10 relative mt-auto">
+        <Footer />
+      </footer>
     </div>
   );
 };
