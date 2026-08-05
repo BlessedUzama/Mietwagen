@@ -1,6 +1,7 @@
 export interface VehicleTier {
-  id: 'comfort' | 'executive' | 'van';
+  id: 'electric' | 'suv' | 'van7';
   nameKey: string;
+  sampleModel: string;
   multiplier: number;
   basePrice: number;
   seats: number;
@@ -20,31 +21,34 @@ export interface QuickLocation {
 
 export const VEHICLE_TIERS: VehicleTier[] = [
   {
-    id: 'comfort',
-    nameKey: 'fleet.comfort.title',
+    id: 'electric',
+    nameKey: 'fleetShowcase.electric.title',
+    sampleModel: 'Hyundai Ioniq 5',
     multiplier: 1.0,
-    basePrice: 35,
+    basePrice: 40,
     seats: 4,
     luggage: 2,
+    iconName: 'Zap',
+  },
+  {
+    id: 'suv',
+    nameKey: 'fleetShowcase.suv.title',
+    sampleModel: 'Volkswagen Touareg',
+    multiplier: 1.35,
+    basePrice: 55,
+    seats: 4,
+    luggage: 4,
     iconName: 'Car',
   },
   {
-    id: 'executive',
-    nameKey: 'fleet.executive.title',
-    multiplier: 1.35,
-    basePrice: 50,
-    seats: 4,
-    luggage: 3,
-    iconName: 'ShieldCheck',
-  },
-  {
-    id: 'van',
-    nameKey: 'fleet.van.title',
-    multiplier: 1.6,
+    id: 'van7',
+    nameKey: 'fleetShowcase.van7.title',
+    sampleModel: 'BMW 2 Series Gran Tourer',
+    multiplier: 1.5,
     basePrice: 65,
     seats: 7,
     luggage: 6,
-    iconName: 'Users',
+    iconName: 'Users2',
   },
 ];
 
@@ -89,7 +93,7 @@ export const POPULAR_ROUTES: QuickLocation[] = [
 
 export function calculateFare(
   routeId: string | null,
-  tierId: 'comfort' | 'executive' | 'van'
+  tierId: 'electric' | 'suv' | 'van7'
 ): { fare: number; km: number; mins: number } {
   const selectedTier = VEHICLE_TIERS.find((t) => t.id === tierId) || VEHICLE_TIERS[0];
 

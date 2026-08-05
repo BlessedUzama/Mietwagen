@@ -58,27 +58,12 @@
     "seats": "Sitzplätze",
     "luggage": "Koffer",
     "features": "Ausstattung",
-    "requestThisClass": "Diese Klasse wählen",
-    "comfort": {
-      "title": "Comfort Sedan",
-      "desc": "Perfekt für Einzelfahrten, Hoteltransfers und City-Touren in Frankfurt.",
-      "features": ["Klimaanlage", "WLAN an Bord", "Mineralwasser inklusive", "Ladekabel für Smartphones"]
-    },
-    "executive": {
-      "title": "Executive Business",
-      "desc": "Oberklasse-Komfort für Geschäftsreisende, VIPs und Messebesucher.",
-      "features": ["Lederausstattung", "Extra Beinfreiheit", "Flüsterleiser Innenraum", "Priority-Check-in Support"]
-    },
-    "van": {
-      "title": "Group & Business Van",
-      "desc": "Großzügiges Raumangebot für Gruppen, Familien und viel Gepäck.",
-      "features": ["Bis zu 7 Fahrgäste", "Großer Kofferraum", "Ideal für Flughafentransfer", "Klimaautomatik hinten"]
-    }
+    "requestThisClass": "Diese Klasse wählen"
   },
   "fleetShowcase": {
     "tagline": "EXKLUSIVE FAHRZEUGKLASSEN",
     "title": "Unsere Flotte in Frankfurt",
-    "subtitle": "Wählen Sie zwischen unserer lautlosen Premium-Elektrolimousine und dem geräumigen Comfort 7-Sitzer für Gruppen.",
+    "subtitle": "Wählen Sie zwischen unseren drei modernen Fahrzeugklassen für Einzelfahrten, Geschäftsreisen oder Gruppen.",
     "capacity": "Kapazität",
     "luggage": "Gepäck",
     "upToSeats": "Bis zu {{seats}} Personen",
@@ -87,24 +72,35 @@
     "bookBtn": "{{title}} Buchen",
     "electric": {
       "title": "Premium Electric",
-      "subtitle": "Lautlose, emissionsfreie Luxus-Limousine für Stadt- & Flughafentransfers.",
+      "subtitle": "Lautlose, emissionsfreie Elektro-Limousine (Hyundai Ioniq 5) für Stadt & Flughafen.",
       "badge": "100% Eco Electric",
       "features": [
-        "100% Emissionsfrei & leise",
-        "High-Speed WLAN an Bord",
-        "Gekühltes Mineralwasser",
-        "USB-C Schnellladestationen"
+        "100% Emissionsfrei & flüsterleise",
+        "High-Speed WLAN & USB-C Laden",
+        "Gekühltes Mineralwasser an Bord",
+        "Ideal für Einzelfahrten & Business"
+      ]
+    },
+    "suv": {
+      "title": "Premium SUV",
+      "subtitle": "Erstklassiger Allrad-Komfort (Volkswagen Touareg) mit erweitertem Kofferraum.",
+      "badge": "Oberklasse & Allrad",
+      "features": [
+        "Luxuriöser Allrad-Komfort",
+        "Bis zu 4 große Reisekoffer",
+        "Panorama-Dach & Lederausstattung",
+        "Höchste Sicherheit bei jedem Wetter"
       ]
     },
     "van7": {
       "title": "Comfort 7–Seater",
-      "subtitle": "Maximales Raumangebot & Komfort für Gruppen, Delegationen & viel Gepäck.",
+      "subtitle": "Maximales Raumangebot (BMW 2er Gran Tourer) für Gruppen, Delegationen & Großgepäck.",
       "badge": "Großraum & Gruppe",
       "features": [
         "Bis zu 7 Fahrgäste",
-        "Großzügiger Ladebereich für Koffer",
+        "Großzügiger Ladebereich für 6 Koffer",
         "Klimaautomatik für Fondpassagiere",
-        "Ideal für Gruppen & Flughafen FRA"
+        "Perfekt für Gruppen & Flughafen FRA"
       ]
     }
   },
@@ -140,7 +136,7 @@
     "q2": "Gibt es versteckte Kosten oder Zusatzgebühren bei Stau?",
     "a2": "Nein. Alle angegebenen Fahrpreise sind transparente Festpreise. Bei Verkehrsbehinderungen oder Stau im Raum Frankfurt bleibt Ihr Preis zu 100 % garantiert unverändert.",
     "q3": "Wie viel Gepäck passt in die Fahrzeuge?",
-    "a3": "Unsere Premium Electric Limousine fasst bis zu 2 große Koffer und Handgepäck. Unser Comfort 7-Sitzer bietet großzügigen Stauraum für bis zu 6 große Koffer und Freizeitgepäck.",
+    "a3": "Unsere Premium Electric Limousine fasst 2 Koffer, der Premium SUV fasst 4 Koffer und unser Comfort 7-Sitzer bietet Platz für bis zu 6 große Koffer.",
     "q4": "Welche Zahlungsmöglichkeiten stehen zur Verfügung?",
     "a4": "Sie bezahlen flexibel vor Ort beim Fahrer in bar, mit allen gängigen EC- und Kreditkarten (inkl. Apple Pay / Google Pay) oder vorab direkt per Banküberweisung / PayPal.",
     "q5": "Wie kann ich meine Buchung ändern oder stornieren?",

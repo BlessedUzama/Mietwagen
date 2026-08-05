@@ -12,7 +12,7 @@ export const RideEstimator: React.FC = () => {
 
   const [pickup, setPickup] = useState<string>('');
   const [selectedRouteId, setSelectedRouteId] = useState<string | null>('airport');
-  const [selectedTier, setSelectedTier] = useState<'comfort' | 'executive' | 'van'>('comfort');
+  const [selectedTier, setSelectedTier] = useState<'electric' | 'suv' | 'van7'>('electric');
   const [pickupDate, setPickupDate] = useState<string>(() => {
     const now = new Date();
     now.setHours(now.getHours() + 1);
@@ -47,7 +47,7 @@ export const RideEstimator: React.FC = () => {
 📍 Abholung: ${pickupText}
 🏁 Ziel: ${destinationName}
 📅 Datum/Zeit: ${pickupDate}
-🚘 Fahrzeug: ${tierName}
+🚘 Fahrzeug: ${tierName} (${currentTierObj.sampleModel})
 💰 Festpreis: ca. €${fareResult.fare}
 
 Bitte bestätigen Sie meine Anfrage. Danke!`;
@@ -137,12 +137,12 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
         </div>
 
-        {/* Vehicle Class Switcher Tabs */}
+        {/* Vehicle Class Switcher Tabs - 3 Clean Columns on Desktop */}
         <div className="space-y-2">
           <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {t('hero.vehicleLabel')}
           </label>
-          <div className="grid grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-100/90 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-100/90 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
             {VEHICLE_TIERS.map((tier) => {
               const active = selectedTier === tier.id;
               return (
@@ -157,6 +157,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                   }`}
                 >
                   <span className="text-xs font-bold">{t(tier.nameKey)}</span>
+                  <span className="text-[10px] opacity-80 mt-0.5">{tier.sampleModel}</span>
                   <div className="flex items-center gap-2 mt-1 text-[11px] opacity-90">
                     <span className="flex items-center gap-0.5">
                       <Users className="w-3 h-3" /> {tier.seats}

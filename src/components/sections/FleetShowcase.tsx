@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Users, Briefcase, CheckCircle2, MessageSquare, Zap, Users2, ArrowRight } from 'lucide-react';
+import { Users, Briefcase, CheckCircle2, MessageSquare, Zap, Car, Users2, ArrowRight } from 'lucide-react';
 import { ShinyBordersButton } from '../ui/ShinyBordersButton';
 
 interface VehicleCardData {
-  id: 'electric' | 'van7';
+  id: 'electric' | 'suv' | 'van7';
   titleKey: string;
   subtitleKey: string;
   badgeKey: string;
@@ -23,10 +23,21 @@ const FLEET_CARDS: VehicleCardData[] = [
     subtitleKey: 'fleetShowcase.electric.subtitle',
     badgeKey: 'fleetShowcase.electric.badge',
     icon: <Zap className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
-    sampleModel: 'Mercedes-Benz EQE / Audi Q8 e-tron',
+    sampleModel: 'Hyundai Ioniq 5',
     seats: 4,
     luggage: 2,
     featuresKey: 'fleetShowcase.electric.features',
+  },
+  {
+    id: 'suv',
+    titleKey: 'fleetShowcase.suv.title',
+    subtitleKey: 'fleetShowcase.suv.subtitle',
+    badgeKey: 'fleetShowcase.suv.badge',
+    icon: <Car className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
+    sampleModel: 'Volkswagen Touareg',
+    seats: 4,
+    luggage: 4,
+    featuresKey: 'fleetShowcase.suv.features',
   },
   {
     id: 'van7',
@@ -34,7 +45,7 @@ const FLEET_CARDS: VehicleCardData[] = [
     subtitleKey: 'fleetShowcase.van7.subtitle',
     badgeKey: 'fleetShowcase.van7.badge',
     icon: <Users2 className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
-    sampleModel: 'Mercedes-Benz V-Klasse / EQV',
+    sampleModel: 'BMW 2 Series Gran Tourer',
     seats: 7,
     luggage: 6,
     featuresKey: 'fleetShowcase.van7.features',
@@ -69,8 +80,8 @@ export const FleetShowcase: React.FC = () => {
           </p>
         </div>
 
-        {/* 2-Column Responsive Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* 3-Column Responsive Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {FLEET_CARDS.map((card) => (
             <motion.div
               key={card.id}
