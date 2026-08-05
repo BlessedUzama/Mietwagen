@@ -28,6 +28,9 @@
     "fixedPriceBadge": "Garantiert fixer Preis ohne Aufschlag",
     "ctaWhatsApp": "Fahrt via WhatsApp anfragen",
     "ctaCall": "Direkt anrufen (015210236967)",
+    "quickLocationsHeader": "BELIEBTE SCHNELLZIELE (FRANKFURT)",
+    "fixedPriceTag": "Festpreis",
+    "fareCalcDetails": "Ca. {{km}} km • {{mins}} Min Fahrzeit",
     "quickLocations": {
       "airport": "Flughafen FRA",
       "hbf": "Hauptbahnhof",
@@ -71,6 +74,77 @@
       "desc": "Großzügiges Raumangebot für Gruppen, Familien und viel Gepäck.",
       "features": ["Bis zu 7 Fahrgäste", "Großer Kofferraum", "Ideal für Flughafentransfer", "Klimaautomatik hinten"]
     }
+  },
+  "fleetShowcase": {
+    "tagline": "EXKLUSIVE FAHRZEUGKLASSEN",
+    "title": "Unsere Flotte in Frankfurt",
+    "subtitle": "Wählen Sie zwischen unserer lautlosen Premium-Elektrolimousine und dem geräumigen Comfort 7-Sitzer für Gruppen.",
+    "capacity": "Kapazität",
+    "luggage": "Gepäck",
+    "upToSeats": "Bis zu {{seats}} Personen",
+    "upToLuggage": "Bis zu {{luggage}} Koffer",
+    "featuresHeader": "Ausstattung & Vorteile",
+    "bookBtn": "{{title}} Buchen",
+    "electric": {
+      "title": "Premium Electric",
+      "subtitle": "Lautlose, emissionsfreie Luxus-Limousine für Stadt- & Flughafentransfers.",
+      "badge": "100% Eco Electric",
+      "features": [
+        "100% Emissionsfrei & leise",
+        "High-Speed WLAN an Bord",
+        "Gekühltes Mineralwasser",
+        "USB-C Schnellladestationen"
+      ]
+    },
+    "van7": {
+      "title": "Comfort 7–Seater",
+      "subtitle": "Maximales Raumangebot & Komfort für Gruppen, Delegationen & viel Gepäck.",
+      "badge": "Großraum & Gruppe",
+      "features": [
+        "Bis zu 7 Fahrgäste",
+        "Großzügiger Ladebereich für Koffer",
+        "Klimaautomatik für Fondpassagiere",
+        "Ideal für Gruppen & Flughafen FRA"
+      ]
+    }
+  },
+  "howItWorks": {
+    "tagline": "IN 3 EINFACHEN SCHRITTEN",
+    "title": "So einfach buchen Sie Ihre Fahrt",
+    "subtitle": "Keine komplizierte Registrierung, keine versteckten Gebühren – direkter Service in Frankfurt am Main.",
+    "step1": {
+      "title": "Fahrpreis berechnen",
+      "desc": "Wählen Sie Abholort, Ziel und Wunschuhrzeit in unserem Live-Rechner für ein transparentes Angebot.",
+      "highlight": "Sofortiger Festpreis"
+    },
+    "step2": {
+      "title": "Via WhatsApp bestätigen",
+      "desc": "Ein Klick leitet Ihre Fahrtangaben direkt an Obazee Clement weiter. Sie erhalten binnen Minuten Ihre Bestätigung.",
+      "highlight": "Direkter Kontakt"
+    },
+    "step3": {
+      "title": "Entspannt ankommen",
+      "desc": "Ihr persönlicher Fahrer holt Sie pünktlich ab. Genießen Sie eine sichere, diskrete und saubere Fahrt.",
+      "highlight": "Pünktlich & Diskret"
+    }
+  },
+  "faq": {
+    "tagline": "HÄUFIG GESTELLTE FRAGEN",
+    "title": "Fragen & Antworten",
+    "subtitle": "Alles, was Sie über unseren persönlichen Mietwagen-Service in Frankfurt am Main wissen müssen.",
+    "moreQuestionsTitle": "Noch Fragen offen?",
+    "moreQuestionsSub": "Schreiben Sie Obazee Clement direkt per WhatsApp – wir antworten in unter 5 Minuten.",
+    "askBtn": "Frage via WhatsApp stellen",
+    "q1": "Wie funktioniert die Abholung am Flughafen Frankfurt (FRA)?",
+    "a1": "Ihr Fahrer Obazee Clement erwartet Sie pünktlich im Ankunftsbereich (Terminal 1 oder 2) mit einem personalisierten Abholschild. Wir verfolgen Ihre Flugnummer live, sodass keine zusätzlichen Kosten bei Flugverspätungen entstehen.",
+    "q2": "Gibt es versteckte Kosten oder Zusatzgebühren bei Stau?",
+    "a2": "Nein. Alle angegebenen Fahrpreise sind transparente Festpreise. Bei Verkehrsbehinderungen oder Stau im Raum Frankfurt bleibt Ihr Preis zu 100 % garantiert unverändert.",
+    "q3": "Wie viel Gepäck passt in die Fahrzeuge?",
+    "a3": "Unsere Premium Electric Limousine fasst bis zu 2 große Koffer und Handgepäck. Unser Comfort 7-Sitzer bietet großzügigen Stauraum für bis zu 6 große Koffer und Freizeitgepäck.",
+    "q4": "Welche Zahlungsmöglichkeiten stehen zur Verfügung?",
+    "a4": "Sie bezahlen flexibel vor Ort beim Fahrer in bar, mit allen gängigen EC- und Kreditkarten (inkl. Apple Pay / Google Pay) oder vorab direkt per Banküberweisung / PayPal.",
+    "q5": "Wie kann ich meine Buchung ändern oder stornieren?",
+    "a5": "Änderungen oder Stornierungen können Sie bis zu 2 Stunden vor Fahrtantritt ganz unkompliziert und kostenlos direkt via WhatsApp an Obazee Clement senden."
   },
   "calculator": {
     "title": "Interaktiver Fahrpreisrechner",

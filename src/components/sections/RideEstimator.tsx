@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Navigation, Calendar, Shield, ArrowRight, MessageSquare, Users, Briefcase } from 'lucide-react';
-import { ShineBorder } from '../ui/ShineBorder';
 import { ShinyBordersButton } from '../ui/ShinyBordersButton';
 import { POPULAR_ROUTES, VEHICLE_TIERS, calculateFare } from '../../utils/fareCalculator';
 import type { VehicleTier } from '../../utils/fareCalculator';
@@ -21,7 +20,6 @@ export const RideEstimator: React.FC = () => {
   });
 
   const fareResult = calculateFare(selectedRouteId, selectedTier);
-
   const activeRoute = POPULAR_ROUTES.find((r) => r.id === selectedRouteId);
 
   const handleSelectRoute = (routeId: string) => {
@@ -59,20 +57,18 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
   };
 
   return (
-    <ShineBorder
-      color={['#6366F1', '#10B981', '#3B82F6']}
-      borderRadius={24}
-      className="w-full shadow-glass-dark dark:shadow-2xl"
-    >
-      <div className="p-6 sm:p-8 bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-white rounded-[23px] space-y-6 backdrop-blur-2xl transition-colors duration-300">
+    <div className="w-full rounded-[24px] p-[1px] bg-gradient-to-b from-slate-200/80 via-slate-300/40 to-slate-200/80 dark:from-slate-800/80 dark:via-slate-800/40 dark:to-slate-800/80 shadow-2xl">
+      <div className="p-6 sm:p-8 bg-white/95 dark:bg-[#0B1220]/95 text-slate-900 dark:text-white rounded-[23px] space-y-6 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
         {/* Header Title & Live Badge */}
-        <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800/80">
           <div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
-              <Navigation className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+              <Navigation className="w-5 h-5 text-blue-600 dark:text-blue-400 rotate-45" />
               <span>{t('hero.bookingCardTitle')}</span>
             </h3>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">{t('hero.bookingCardSub')}</p>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+              {t('hero.bookingCardSub')}
+            </p>
           </div>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
@@ -82,8 +78,8 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
 
         {/* Quick Destination Chips */}
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-            Beliebte Schnellziele (Frankfurt)
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            {t('hero.quickLocationsHeader')}
           </label>
           <div className="flex flex-wrap gap-2">
             {POPULAR_ROUTES.map((route) => {
@@ -93,10 +89,10 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                   key={route.id}
                   onClick={() => handleSelectRoute(route.id)}
                   type="button"
-                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? 'bg-indigo-600 text-white shadow-glow-indigo border border-indigo-400/50'
-                      : 'bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700/60'
+                      ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30 border border-blue-400/40'
+                      : 'bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/80 border border-slate-200/60 dark:border-slate-700/50'
                   }`}
                 >
                   {t(route.labelKey)}
@@ -111,7 +107,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           {/* Pickup Input */}
           <div className="space-y-1.5">
             <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400" />
+              <MapPin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
               <span>{t('hero.pickupLabel')}</span>
             </label>
             <input
@@ -122,31 +118,31 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                 setSelectedRouteId(null);
               }}
               placeholder={t('hero.pickupPlaceholder')}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
           </div>
 
           {/* Pickup Date & Time */}
           <div className="space-y-1.5">
             <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400" />
+              <Calendar className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
               <span>{t('hero.dateLabel')}</span>
             </label>
             <input
               type="datetime-local"
               value={pickupDate}
               onChange={(e) => setPickupDate(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
           </div>
         </div>
 
-        {/* Vehicle Tier Switcher Tabs */}
+        {/* Vehicle Class Switcher Tabs */}
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {t('hero.vehicleLabel')}
           </label>
-          <div className="grid grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/60">
+          <div className="grid grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-100/90 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
             {VEHICLE_TIERS.map((tier) => {
               const active = selectedTier === tier.id;
               return (
@@ -156,8 +152,8 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                   onClick={() => setSelectedTier(tier.id)}
                   className={`flex flex-col items-center justify-center p-2.5 rounded-xl transition-all duration-200 cursor-pointer ${
                     active
-                      ? 'bg-indigo-600 text-white shadow-md border border-indigo-400/40'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-700/50'
+                      ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30 border border-blue-400/40'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800/60'
                   }`}
                 >
                   <span className="text-xs font-bold">{t(tier.nameKey)}</span>
@@ -175,8 +171,8 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
         </div>
 
-        {/* Price Output & Conversion Box */}
-        <div className="p-4 rounded-2xl bg-slate-100/90 dark:bg-gradient-to-r dark:from-indigo-950/60 dark:via-slate-900 dark:to-emerald-950/60 border border-indigo-500/20 dark:border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Price Output & Emerald Conversion Box */}
+        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left space-y-1">
             <span className="text-xs text-slate-500 dark:text-slate-400 font-medium block">
               {t('hero.estimatedFare')}
@@ -184,11 +180,11 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-black text-slate-900 dark:text-white">€{fareResult.fare}</span>
               <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                <Shield className="w-3 h-3" /> Festpreis
+                <Shield className="w-3 h-3" /> {t('hero.fixedPriceTag')}
               </span>
             </div>
             <p className="text-[11px] text-slate-500 dark:text-slate-400">
-              Ca. {fareResult.km} km • {fareResult.mins} Min Fahrzeit
+              {t('hero.fareCalcDetails', { km: fareResult.km, mins: fareResult.mins })}
             </p>
           </div>
 
@@ -203,6 +199,6 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </ShinyBordersButton>
         </div>
       </div>
-    </ShineBorder>
+    </div>
   );
 };

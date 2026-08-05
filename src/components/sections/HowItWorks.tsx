@@ -1,40 +1,43 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Calculator, MessageSquare, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
 
 interface StepData {
   number: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descKey: string;
   icon: React.ReactNode;
-  highlight: string;
+  highlightKey: string;
 }
 
 const STEPS_DATA: StepData[] = [
   {
     number: '01',
-    title: 'Fahrpreis berechnen',
-    description: 'Wählen Sie Abholort, Ziel und Wunschuhrzeit in unserem Live-Rechner für ein transparentes Angebot.',
+    titleKey: 'howItWorks.step1.title',
+    descKey: 'howItWorks.step1.desc',
     icon: <Calculator className="w-6 h-6 text-blue-500 dark:text-blue-400" />,
-    highlight: 'Sofortiger Festpreis',
+    highlightKey: 'howItWorks.step1.highlight',
   },
   {
     number: '02',
-    title: 'Via WhatsApp bestätigen',
-    description: 'Ein Klick leitet Ihre Fahrtangaben direkt an Obazee Clement weiter. Sie erhalten binnen Minuten Ihre Bestätigung.',
+    titleKey: 'howItWorks.step2.title',
+    descKey: 'howItWorks.step2.desc',
     icon: <MessageSquare className="w-6 h-6 text-emerald-500 dark:text-emerald-400" />,
-    highlight: 'Direkter Kontakt',
+    highlightKey: 'howItWorks.step2.highlight',
   },
   {
     number: '03',
-    title: 'Entspannt ankommen',
-    description: 'Ihr persönlicher Fahrer holt Sie pünktlich ab. Genießen Sie eine sichere, diskrete und saubere Fahrt.',
+    titleKey: 'howItWorks.step3.title',
+    descKey: 'howItWorks.step3.desc',
     icon: <ShieldCheck className="w-6 h-6 text-blue-500 dark:text-blue-400" />,
-    highlight: 'Pünktlich & Diskret',
+    highlightKey: 'howItWorks.step3.highlight',
   },
 ];
 
 export const HowItWorks: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="how-it-works" className="relative py-20 md:py-32 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -42,15 +45,15 @@ export const HowItWorks: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-blue-500" />
-            <span>IN 3 EINFACHEN SCHRITTEN</span>
+            <span>{t('howItWorks.tagline')}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            So einfach buchen Sie Ihre Fahrt
+            {t('howItWorks.title')}
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
-            Keine komplizierte Registrierung, keine versteckten Gebühren – direkter Service in Frankfurt am Main.
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -79,17 +82,17 @@ export const HowItWorks: React.FC = () => {
                 {/* Title & Description */}
                 <div className="text-left space-y-2">
                   <h3 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {step.description}
+                    {t(step.descKey)}
                   </p>
                 </div>
               </div>
 
               {/* Bottom Feature Tag */}
               <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">{step.highlight}</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">{t(step.highlightKey)}</span>
                 {index < STEPS_DATA.length - 1 && (
                   <ArrowRight className="w-4 h-4 hidden md:block text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform" />
                 )}

@@ -23,11 +23,14 @@
     "dropoffLabel": "Destination",
     "dropoffPlaceholder": "e.g. Frankfurt Airport (FRA), Exhibition Center",
     "dateLabel": "Date & Time",
-    "vehicleLabel": "Vehicle Class",
+    "vehicleLabel": "VEHICLE CLASS",
     "estimatedFare": "Estimated Fixed Fare",
     "fixedPriceBadge": "Guaranteed fixed price with no hidden costs",
-    "ctaWhatsApp": "Request Ride via WhatsApp",
+    "ctaWhatsApp": "WhatsApp",
     "ctaCall": "Call Driver Direct (015210236967)",
+    "quickLocationsHeader": "POPULAR DESTINATIONS (FRANKFURT)",
+    "fixedPriceTag": "Fixed Fare",
+    "fareCalcDetails": "Est. {{km}} km • {{mins}} mins travel time",
     "quickLocations": {
       "airport": "Frankfurt Airport (FRA)",
       "hbf": "Main Station",
@@ -71,6 +74,77 @@
       "desc": "Generous space for groups, families, corporate teams, and extensive luggage.",
       "features": ["Up to 7 Passengers", "Spacious Trunk", "Ideal for Airport Transfers", "Rear Climate Control"]
     }
+  },
+  "fleetShowcase": {
+    "tagline": "EXCLUSIVE VEHICLE CLASSES",
+    "title": "Our Fleet in Frankfurt",
+    "subtitle": "Choose between our whisper-quiet Premium Electric sedan and the spacious Comfort 7-Seater for groups.",
+    "capacity": "Capacity",
+    "luggage": "Luggage",
+    "upToSeats": "Up to {{seats}} Passengers",
+    "upToLuggage": "Up to {{luggage}} Bags",
+    "featuresHeader": "Features & Benefits",
+    "bookBtn": "Book {{title}}",
+    "electric": {
+      "title": "Premium Electric",
+      "subtitle": "Whisper-quiet, zero-emission luxury sedan for city & airport transfers.",
+      "badge": "100% Eco Electric",
+      "features": [
+        "100% Zero-emission & quiet",
+        "High-Speed Onboard Wi-Fi",
+        "Chilled Mineral Water",
+        "USB-C Fast Charging Stations"
+      ]
+    },
+    "van7": {
+      "title": "Comfort 7–Seater",
+      "subtitle": "Maximum space & comfort for group travel, delegations & heavy luggage.",
+      "badge": "Spacious Group Van",
+      "features": [
+        "Up to 7 Passengers",
+        "Generous Trunk Space for Luggage",
+        "Rear Passenger Climate Control",
+        "Ideal for Groups & FRA Airport"
+      ]
+    }
+  },
+  "howItWorks": {
+    "tagline": "IN 3 SIMPLE STEPS",
+    "title": "Booking Your Ride Is Easy",
+    "subtitle": "No complex registration, no hidden fees – direct service in Frankfurt am Main.",
+    "step1": {
+      "title": "Estimate Your Fare",
+      "desc": "Select pickup location, destination, and time in our live estimator for a transparent quote.",
+      "highlight": "Instant Fixed Fare"
+    },
+    "step2": {
+      "title": "Confirm via WhatsApp",
+      "desc": "One click sends your trip details directly to Obazee Clement. Receive your confirmation in minutes.",
+      "highlight": "Direct Contact"
+    },
+    "step3": {
+      "title": "Arrive Relaxed",
+      "desc": "Your personal driver arrives on time. Enjoy a safe, discrete, and clean ride.",
+      "highlight": "Punctual & Discreet"
+    }
+  },
+  "faq": {
+    "tagline": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Questions & Answers",
+    "subtitle": "Everything you need to know about our personal ride service in Frankfurt am Main.",
+    "moreQuestionsTitle": "Still Have Questions?",
+    "moreQuestionsSub": "Message Obazee Clement directly via WhatsApp – we reply in under 5 minutes.",
+    "askBtn": "Ask Question via WhatsApp",
+    "q1": "How does pickup at Frankfurt Airport (FRA) work?",
+    "a1": "Your driver Obazee Clement will be waiting for you in the arrival area (Terminal 1 or 2) holding a personalized name sign. We track your flight number in real time so no extra fees occur if your flight is delayed.",
+    "q2": "Are there any hidden costs or extra charges for traffic jams?",
+    "a2": "No. All stated fares are transparent fixed prices. If there is traffic or delay in the Frankfurt area, your price remains 100% guaranteed.",
+    "q3": "How much luggage fits in the vehicles?",
+    "a3": "Our Premium Electric Sedan holds up to 2 large suitcases plus carry-on bags. Our Comfort 7-Seater offers generous trunk space for up to 6 large suitcases.",
+    "q4": "What payment methods are accepted?",
+    "a4": "You pay flexibly on-site to the driver in cash, with any major debit/credit card (including Apple Pay / Google Pay), or in advance via bank transfer / PayPal.",
+    "q5": "Can I cancel or change my booking at short notice?",
+    "a5": "You can change or cancel your booking easily and free of charge directly via WhatsApp up to 2 hours before pickup."
   },
   "calculator": {
     "title": "Interactive Fare Estimator",

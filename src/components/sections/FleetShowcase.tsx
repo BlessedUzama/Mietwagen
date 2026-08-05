@@ -1,56 +1,49 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Users, Briefcase, CheckCircle2, MessageSquare, Zap, Users2, ArrowRight } from 'lucide-react';
 import { ShinyBordersButton } from '../ui/ShinyBordersButton';
 
 interface VehicleCardData {
   id: 'electric' | 'van7';
-  title: string;
-  subtitle: string;
-  badge: string;
+  titleKey: string;
+  subtitleKey: string;
+  badgeKey: string;
   icon: React.ReactNode;
   sampleModel: string;
   seats: number;
   luggage: number;
-  features: string[];
+  featuresKey: string;
 }
 
 const FLEET_CARDS: VehicleCardData[] = [
   {
     id: 'electric',
-    title: 'Premium Electric',
-    subtitle: 'Whisper-quiet, zero-emission luxury sedan for city & airport transfers.',
-    badge: '100% Eco Electric',
+    titleKey: 'fleetShowcase.electric.title',
+    subtitleKey: 'fleetShowcase.electric.subtitle',
+    badgeKey: 'fleetShowcase.electric.badge',
     icon: <Zap className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
     sampleModel: 'Mercedes-Benz EQE / Audi Q8 e-tron',
     seats: 4,
     luggage: 2,
-    features: [
-      '100% Emissionsfrei & leise',
-      'High-Speed WLAN an Bord',
-      'Gekühltes Mineralwasser',
-      'USB-C Schnellladestationen',
-    ],
+    featuresKey: 'fleetShowcase.electric.features',
   },
   {
     id: 'van7',
-    title: 'Comfort 7–Seater',
-    subtitle: 'Maximum space & comfort for group travel, delegations & heavy luggage.',
-    badge: 'Großraum & Gruppe',
+    titleKey: 'fleetShowcase.van7.title',
+    subtitleKey: 'fleetShowcase.van7.subtitle',
+    badgeKey: 'fleetShowcase.van7.badge',
     icon: <Users2 className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
     sampleModel: 'Mercedes-Benz V-Klasse / EQV',
     seats: 7,
     luggage: 6,
-    features: [
-      'Bis zu 7 Fahrgäste',
-      'Großzügiger Ladebereich für Koffer',
-      'Klimaautomatik für Fondpassagiere',
-      'Ideal für Gruppen & Flughafen FRA',
-    ],
+    featuresKey: 'fleetShowcase.van7.features',
   },
 ];
 
 export const FleetShowcase: React.FC = () => {
+  const { t } = useTranslation();
+
   const handleBookVehicle = (vName: string) => {
     const textPayload = `Hallo Obazee Clement! Ich möchte eine Fahrt in der Klasse "${vName}" anfragen.`;
     const whatsappUrl = `https://wa.me/4915210236967?text=${encodeURIComponent(textPayload)}`;
@@ -64,15 +57,15 @@ export const FleetShowcase: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Zap className="w-3.5 h-3.5 text-blue-500" />
-            <span>EXKLUSIVE FAHRZEUGKLASSEN</span>
+            <span>{t('fleetShowcase.tagline')}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Unsere Flotte in Frankfurt
+            {t('fleetShowcase.title')}
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
-            Wählen Sie zwischen unserer lautlosen Premium-Elektrolimousine und dem geräumigen Comfort 7-Sitzer für Gruppen.
+            {t('fleetShowcase.subtitle')}
           </p>
         </div>
 
@@ -90,7 +83,7 @@ export const FleetShowcase: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold">
                     {card.icon}
-                    <span>{card.badge}</span>
+                    <span>{t(card.badgeKey)}</span>
                   </span>
                   <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">
                     {card.sampleModel}
@@ -100,10 +93,10 @@ export const FleetShowcase: React.FC = () => {
                 {/* Card Title & Subtitle */}
                 <div className="text-left space-y-2">
                   <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    {card.title}
+                    {t(card.titleKey)}
                   </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed min-h-[44px]">
-                    {card.subtitle}
+                    {t(card.subtitleKey)}
                   </p>
                 </div>
 
@@ -112,16 +105,16 @@ export const FleetShowcase: React.FC = () => {
                   <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200/60 dark:border-slate-800 flex items-center gap-3">
                     <Users className="w-4 h-4 text-blue-500 shrink-0" />
                     <div className="text-left">
-                      <span className="text-[10px] text-slate-500 dark:text-slate-400 block uppercase font-bold">Kapazität</span>
-                      <span className="text-xs font-bold text-slate-900 dark:text-white">Bis zu {card.seats} Personen</span>
+                      <span className="text-[10px] text-slate-500 dark:text-slate-400 block uppercase font-bold">{t('fleetShowcase.capacity')}</span>
+                      <span className="text-xs font-bold text-slate-900 dark:text-white">{t('fleetShowcase.upToSeats', { seats: card.seats })}</span>
                     </div>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200/60 dark:border-slate-800 flex items-center gap-3">
                     <Briefcase className="w-4 h-4 text-blue-500 shrink-0" />
                     <div className="text-left">
-                      <span className="text-[10px] text-slate-500 dark:text-slate-400 block uppercase font-bold">Gepäck</span>
-                      <span className="text-xs font-bold text-slate-900 dark:text-white">Bis zu {card.luggage} Koffer</span>
+                      <span className="text-[10px] text-slate-500 dark:text-slate-400 block uppercase font-bold">{t('fleetShowcase.luggage')}</span>
+                      <span className="text-xs font-bold text-slate-900 dark:text-white">{t('fleetShowcase.upToLuggage', { luggage: card.luggage })}</span>
                     </div>
                   </div>
                 </div>
@@ -129,10 +122,10 @@ export const FleetShowcase: React.FC = () => {
                 {/* Feature Checklist */}
                 <div className="space-y-2.5 pt-2 text-left">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
-                    Ausstattung & Vorteile
+                    {t('fleetShowcase.featuresHeader')}
                   </span>
                   <div className="space-y-2">
-                    {card.features.map((feat, idx) => (
+                    {(t(card.featuresKey, { returnObjects: true }) as string[]).map((feat, idx) => (
                       <div key={idx} className="flex items-center gap-2.5 text-xs font-medium text-slate-700 dark:text-slate-300">
                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>{feat}</span>
@@ -147,10 +140,10 @@ export const FleetShowcase: React.FC = () => {
                 <ShinyBordersButton
                   variant="whatsapp"
                   fullWidth
-                  onClick={() => handleBookVehicle(card.title)}
+                  onClick={() => handleBookVehicle(t(card.titleKey))}
                   icon={<MessageSquare className="w-4.5 h-4.5 text-white" />}
                 >
-                  <span>{card.title} Buchen</span>
+                  <span>{t('fleetShowcase.bookBtn', { title: t(card.titleKey) })}</span>
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </ShinyBordersButton>
               </div>
