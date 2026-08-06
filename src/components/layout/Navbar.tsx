@@ -29,7 +29,6 @@ export const Navbar: React.FC = () => {
     { id: 'home', label: t('nav.home'), hideAtTop: true },
     { id: 'advantages', label: t('nav.advantages'), hideAtTop: false },
     { id: 'fleet', label: t('nav.fleet'), hideAtTop: false },
-    { id: 'calculator', label: t('nav.calculator'), hideAtTop: true },
     { id: 'location', label: t('nav.location'), hideAtTop: false },
     { id: 'contact', label: t('nav.contact'), hideAtTop: false },
   ];
