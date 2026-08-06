@@ -6,6 +6,7 @@ import { RideEstimator } from '../components/sections/RideEstimator';
 import { FleetShowcase } from '../components/sections/FleetShowcase';
 import { HowItWorks } from '../components/sections/HowItWorks';
 import { FAQSection } from '../components/sections/FAQSection';
+import { LocationSection } from '../components/sections/LocationSection';
 
 export const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const HomePage: React.FC = () => {
       <FleetShowcase />
       <HowItWorks />
       <FAQSection />
+      <LocationSection />
     </>
   );
 };
