@@ -57,7 +57,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
   };
 
   return (
-    <div className="w-full rounded-[24px] p-[1px] bg-gradient-to-b from-slate-200/80 via-slate-300/40 to-slate-200/80 dark:from-slate-800/80 dark:via-slate-800/40 dark:to-slate-800/80 shadow-2xl">
+    <div id="calculator" className="w-full rounded-[24px] p-[1px] bg-gradient-to-b from-slate-200/80 via-slate-300/40 to-slate-200/80 dark:from-slate-800/80 dark:via-slate-800/40 dark:to-slate-800/80 shadow-2xl">
       <div className="p-6 sm:p-8 bg-white/95 dark:bg-[#0B1220]/95 text-slate-900 dark:text-white rounded-[23px] space-y-6 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
         {/* Header Title & Live Badge */}
         <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800/80">
@@ -137,7 +137,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
         </div>
 
-        {/* Vehicle Class Switcher Tabs - 3 Clean Columns on Desktop */}
+        {/* Vehicle Class Switcher Tabs */}
         <div className="space-y-2">
           <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {t('hero.vehicleLabel')}

@@ -40,6 +40,9 @@ export const HowItWorks: React.FC = () => {
 
   return (
     <section id="how-it-works" className="relative py-20 md:py-32 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
+      {/* Advantages Scroll Target Anchor */}
+      <div id="advantages" className="absolute -top-20 left-0" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">

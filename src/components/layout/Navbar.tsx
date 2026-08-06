@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Phone, Menu, X, Globe, MessageSquare } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
@@ -13,22 +13,44 @@ export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { href: '/#home', label: t('nav.home') },
-    { href: '/#advantages', label: t('nav.advantages') },
-    { href: '/#fleet', label: t('nav.fleet') },
-    { href: '/#calculator', label: t('nav.calculator') },
-    { href: '/#location', label: t('nav.location') },
-    { href: '/#contact', label: t('nav.contact') },
+    { id: 'home', label: t('nav.home') },
+    { id: 'advantages', label: t('nav.advantages') },
+    { id: 'fleet', label: t('nav.fleet') },
+    { id: 'calculator', label: t('nav.calculator') },
+    { id: 'location', label: t('nav.location') },
+    { id: 'contact', label: t('nav.contact') },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+
+    if (location.pathname !== '/') {
+      navigate(`/#${targetId}`);
+      setTimeout(() => {
+        const elem = document.getElementById(targetId);
+        elem?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return;
+    }
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, '', `#${targetId}`);
+    }
+  };
 
   return (
     <nav className="w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={(e) => handleNavClick(e as unknown as React.MouseEvent<HTMLAnchorElement>, 'home')} className="flex items-center">
             <BrandLogo />
           </Link>
 
@@ -36,8 +58,9 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => handleNavClick(e, link.id)}
                 className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 {link.label}
@@ -123,9 +146,9 @@ export const Navbar: React.FC = () => {
           >
             {navLinks.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => handleNavClick(e, link.id)}
                 className="block px-3 py-2 rounded-lg text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
               >
                 {link.label}
