@@ -10,6 +10,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = '', showText =
     <div className={`inline-flex items-center group cursor-pointer ${className}`}>
       <svg
         viewBox={showText ? "40 145 845 195" : "40 145 315 195"}
+        width={showText ? "845" : "315"}
+        height="195"
         className={showText ? "h-9 sm:h-10 w-auto transition-transform duration-300 group-hover:scale-105" : "h-9 w-auto transition-transform duration-300 group-hover:scale-105"}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -19,7 +19,11 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsAtTop(window.scrollY < 50);
+      const isTop = window.scrollY < 50;
+      setIsAtTop((prevState) => {
+        if (prevState !== isTop) return isTop;
+        return prevState;
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -65,7 +69,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
+    <nav className="w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl transform-gpu border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
