@@ -32,10 +32,10 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="relative py-20 md:py-32 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
+    <section id="faq" className="relative py-12 md:py-16 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-blue-500" />
             <span>{t('faq.tagline')}</span>
@@ -99,7 +99,7 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* Additional Question WhatsApp Conversion Callout */}
-        <div className="mt-14 p-8 rounded-3xl bg-slate-100 dark:bg-[#0B1220] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-10 p-8 rounded-3xl bg-slate-100 dark:bg-[#0B1220] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left space-y-1">
             <h4 className="text-lg font-bold text-slate-900 dark:text-white">{t('faq.moreQuestionsTitle')}</h4>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">

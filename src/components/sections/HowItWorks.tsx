@@ -39,13 +39,13 @@ export const HowItWorks: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="how-it-works" className="relative py-20 md:py-32 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
+    <section id="how-it-works" className="relative py-12 md:py-16 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
       {/* Advantages Scroll Target Anchor */}
       <div id="advantages" className="absolute -top-20 left-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-blue-500" />
             <span>{t('howItWorks.tagline')}</span>
