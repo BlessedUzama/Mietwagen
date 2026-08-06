@@ -68,6 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
                 href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20in%20Frankfurt%20anfragen."
                 target="_blank"
                 rel="noopener noreferrer"
+                className="observe-wa-btn"
               >
                 <ShinyBordersButton variant="whatsapp" size="lg" icon={<MessageSquare className="w-5 h-5 text-white" />}>
                   {t('hero.ctaWhatsApp')}

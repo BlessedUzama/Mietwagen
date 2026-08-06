@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,45 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
   phoneNumber = '4915210236967',
 }) => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let observer: IntersectionObserver | null = null;
+    const visibleButtons = new Set<Element>();
+
+    const setupObserver = () => {
+      const buttons = document.querySelectorAll('.observe-wa-btn');
+      if (buttons.length === 0) return;
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              visibleButtons.add(entry.target);
+            } else {
+              visibleButtons.delete(entry.target);
+            }
+          });
+          // Hide floating widget if any static/inline WhatsApp button is visible on screen
+          setIsVisible(visibleButtons.size === 0);
+        },
+        { threshold: 0.1 }
+      );
+
+      buttons.forEach((btn) => observer?.observe(btn));
+    };
+
+    // Initial setup + fallback delay for dynamic client mounts
+    setupObserver();
+    const timer = setTimeout(setupObserver, 300);
+
+    return () => {
+      clearTimeout(timer);
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
   const message = encodeURIComponent(
     'Hallo Obazee Clement, ich möchte eine direkte Fahrt in Frankfurt am Main anfragen.'
@@ -19,7 +58,13 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 transition-all duration-300 ${
+        isVisible
+          ? 'opacity-100 scale-100 pointer-events-auto'
+          : 'opacity-0 scale-90 pointer-events-none'
+      }`}
+    >
       {/* Response Badge Tooltip */}
       <motion.div
         initial={{ opacity: 0, x: 10 }}

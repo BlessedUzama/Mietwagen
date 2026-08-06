@@ -152,6 +152,7 @@ export const FleetShowcase: React.FC = () => {
                   variant="whatsapp"
                   fullWidth
                   onClick={() => handleBookVehicle(t(card.titleKey))}
+                  className="observe-wa-btn"
                   icon={<MessageSquare className="w-4.5 h-4.5 text-white" />}
                 >
                   <span>{t('fleetShowcase.bookBtn', { title: t(card.titleKey) })}</span>

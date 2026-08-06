@@ -204,6 +204,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
             variant="whatsapp"
             size="lg"
             onClick={handleWhatsAppBooking}
+            className="observe-wa-btn"
             icon={<MessageSquare className="w-5 h-5 text-white" />}
           >
             <span>{t('hero.ctaWhatsApp')}</span>

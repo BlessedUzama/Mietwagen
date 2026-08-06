@@ -111,6 +111,7 @@ export const FAQSection: React.FC = () => {
             variant="whatsapp"
             size="md"
             onClick={handleAskQuestion}
+            className="observe-wa-btn"
             icon={<MessageSquare className="w-4.5 h-4.5 text-white" />}
           >
             <span>{t('faq.askBtn')}</span>
