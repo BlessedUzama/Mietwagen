@@ -66,8 +66,8 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
 
   return (
     <div id="calculator" className="w-full relative rounded-[24px] p-[1px] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-blue-500/30 shadow-2xl">
-      {/* Behind-Card Ambient Purple Blur */}
-      <div className="absolute -inset-2 rounded-[28px] bg-gradient-to-r from-indigo-500/15 via-purple-500/15 to-blue-500/15 blur-xl md:blur-2xl transform-gpu will-change-transform pointer-events-none -z-10" />
+      {/* Behind-Card Ambient Purple Glow */}
+      <div className="absolute -inset-4 rounded-[32px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600/25 via-purple-600/15 to-transparent pointer-events-none transform-gpu contain-paint -z-10" />
 
       <div className="p-6 sm:p-8 bg-white/95 dark:bg-[#0B1220]/95 text-slate-900 dark:text-white rounded-[23px] space-y-6 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
         {/* Header Title & Live Badge */}

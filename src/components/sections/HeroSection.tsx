@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-8 md:pt-12 pb-16 md:pb-20">
+    <section id="home" className="relative min-h-[75dvh] sm:min-h-[80dvh] flex items-center justify-center overflow-hidden pt-8 md:pt-12 pb-16 md:pb-20">
       {/* 21st.dev Grid Glow Background Aura */}
       <GridGlowBackground />
 
