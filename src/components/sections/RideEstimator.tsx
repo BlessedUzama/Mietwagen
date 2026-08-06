@@ -94,7 +94,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                   type="button"
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/25 border border-indigo-400/40 scale-[1.02]'
+                      ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/40 border border-indigo-400/30'
                       : 'bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/80 border border-slate-200/60 dark:border-slate-700/50'
                   }`}
                 >
@@ -155,7 +155,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
                   onClick={() => setSelectedTier(tier.id)}
                   className={`flex flex-col items-center justify-center p-2.5 rounded-xl transition-all duration-200 cursor-pointer ${
                     active
-                      ? 'bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white border border-indigo-400/50 shadow-md shadow-indigo-500/20 scale-[1.02]'
+                      ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/40 border border-indigo-400/40'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800/60'
                   }`}
                 >
