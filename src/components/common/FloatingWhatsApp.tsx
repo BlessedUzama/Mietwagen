@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -12,10 +12,10 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
 }) => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(true);
+  const visibleButtonsRef = useRef(new Set<Element>());
 
   useEffect(() => {
     let observer: IntersectionObserver | null = null;
-    const visibleButtons = new Set<Element>();
 
     const setupObserver = () => {
       const buttons = document.querySelectorAll('.observe-wa-btn');
@@ -25,13 +25,14 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              visibleButtons.add(entry.target);
+              visibleButtonsRef.current.add(entry.target);
             } else {
-              visibleButtons.delete(entry.target);
+              visibleButtonsRef.current.delete(entry.target);
             }
           });
-          // Hide floating widget if any static/inline WhatsApp button is visible on screen
-          setIsVisible(visibleButtons.size === 0);
+
+          const shouldBeVisible = visibleButtonsRef.current.size === 0;
+          setIsVisible((prev) => (prev !== shouldBeVisible ? shouldBeVisible : prev));
         },
         { threshold: 0.1 }
       );
@@ -39,7 +40,6 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
       buttons.forEach((btn) => observer?.observe(btn));
     };
 
-    // Initial setup + fallback delay for dynamic client mounts
     setupObserver();
     const timer = setTimeout(setupObserver, 300);
 

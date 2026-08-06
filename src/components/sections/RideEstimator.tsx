@@ -65,7 +65,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
   };
 
   return (
-    <div id="calculator" className="w-full relative rounded-[24px] p-[1px] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-blue-500/30 shadow-2xl">
+    <div id="calculator" className="w-full relative contain-paint rounded-[24px] p-[1px] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-blue-500/30 shadow-2xl">
       {/* Behind-Card Ambient Purple Glow */}
       <div className="absolute -inset-4 rounded-[32px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600/25 via-purple-600/15 to-transparent pointer-events-none transform-gpu contain-paint -z-10" />
 

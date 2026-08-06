@@ -25,7 +25,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="lg:col-span-7 space-y-6 text-left"
+            className="lg:col-span-7 space-y-6 text-left contain-paint"
           >
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 dark:bg-indigo-400/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide uppercase">
