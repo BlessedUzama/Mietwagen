@@ -10,14 +10,21 @@ export const RideEstimator: React.FC = () => {
   const { t } = useTranslation();
   const { language } = useLanguage();
 
+  const getInitialLocalDateTime = () => {
+    const now = new Date();
+    now.setHours(now.getHours() + 1);
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+  };
+
   const [pickup, setPickup] = useState<string>('');
   const [selectedRouteId, setSelectedRouteId] = useState<string | null>('airport');
   const [selectedTier, setSelectedTier] = useState<'electric' | 'suv' | 'van7'>('electric');
-  const [pickupDate, setPickupDate] = useState<string>(() => {
-    const now = new Date();
-    now.setHours(now.getHours() + 1);
-    return now.toISOString().slice(0, 16);
-  });
+  const [pickupDate, setPickupDate] = useState<string>(getInitialLocalDateTime);
 
   const fareResult = calculateFare(selectedRouteId, selectedTier);
   const activeRoute = POPULAR_ROUTES.find((r) => r.id === selectedRouteId);
@@ -40,13 +47,14 @@ export const RideEstimator: React.FC = () => {
         : activeRoute.nameEn
       : 'Frankfurt am Main';
 
-    const pickupText = pickup || (language === 'de' ? 'Frankfurt Zentrum' : 'Frankfurt Downtown');
+    const pickupText = pickup.trim() || (language === 'de' ? 'Frankfurt Zentrum' : 'Frankfurt Downtown');
+    const dateText = pickupDate || (language === 'de' ? 'So schnell wie möglich' : 'As soon as possible');
     const tierName = t(currentTierObj.nameKey);
 
     const textPayload = `Hallo Obazee Clement! Ich möchte eine Fahrt buchen:
 📍 Abholung: ${pickupText}
 🏁 Ziel: ${destinationName}
-📅 Datum/Zeit: ${pickupDate}
+📅 Datum/Zeit: ${dateText}
 🚘 Fahrzeug: ${tierName} (${currentTierObj.sampleModel})
 💰 Festpreis: ca. €${fareResult.fare}
 
