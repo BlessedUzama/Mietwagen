@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,16 +13,25 @@ export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < 50);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navLinks = [
-    { id: 'home', label: t('nav.home') },
-    { id: 'advantages', label: t('nav.advantages') },
-    { id: 'fleet', label: t('nav.fleet') },
-    { id: 'calculator', label: t('nav.calculator') },
-    { id: 'location', label: t('nav.location') },
-    { id: 'contact', label: t('nav.contact') },
+    { id: 'home', label: t('nav.home'), hideAtTop: true },
+    { id: 'advantages', label: t('nav.advantages'), hideAtTop: false },
+    { id: 'fleet', label: t('nav.fleet'), hideAtTop: false },
+    { id: 'calculator', label: t('nav.calculator'), hideAtTop: true },
+    { id: 'location', label: t('nav.location'), hideAtTop: false },
+    { id: 'contact', label: t('nav.contact'), hideAtTop: false },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -56,16 +65,21 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={(e) => handleNavClick(e, link.id)}
-                className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const shouldHide = link.hideAtTop && isAtTop && location.pathname === '/';
+              return (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => handleNavClick(e, link.id)}
+                  className={`text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
+                    shouldHide ? 'hidden' : 'block'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* Toggles & CTAs */}
