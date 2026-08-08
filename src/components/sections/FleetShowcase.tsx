@@ -152,11 +152,11 @@ export const FleetShowcase: React.FC = () => {
                   variant="whatsapp"
                   fullWidth
                   onClick={() => handleBookVehicle(t(card.titleKey))}
-                  className="observe-wa-btn"
-                  icon={<MessageSquare className="w-4.5 h-4.5 text-white" />}
+                  className="observe-wa-btn w-full flex flex-row items-center justify-center gap-2 whitespace-nowrap"
+                  icon={<MessageSquare className="w-4.5 h-4.5 text-white shrink-0" />}
                 >
-                  <span>{t('fleetShowcase.bookBtn', { title: t(card.titleKey) })}</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <span className="whitespace-nowrap">{t('fleetShowcase.bookBtn', { title: t(card.titleKey) })}</span>
+                  <ArrowRight className="w-4 h-4 ml-1 shrink-0" />
                 </ShinyBordersButton>
               </div>
             </motion.div>

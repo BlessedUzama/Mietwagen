@@ -206,11 +206,11 @@ ${t('whatsapp.pleaseConfirm')}`;
             size="lg"
             fullWidth
             onClick={handleWhatsAppBooking}
-            className="observe-wa-btn w-full justify-center"
-            icon={<MessageSquare className="w-5 h-5 text-white" />}
+            className="observe-wa-btn w-full flex flex-row items-center justify-center gap-2 whitespace-nowrap"
+            icon={<MessageSquare className="w-5 h-5 text-white shrink-0" />}
           >
-            <span>{t('hero.ctaWhatsApp')}</span>
-            <ArrowRight className="w-4 h-4 ml-1" />
+            <span className="whitespace-nowrap">{t('hero.ctaWhatsApp')}</span>
+            <ArrowRight className="w-4 h-4 ml-1 shrink-0" />
           </ShinyBordersButton>
         </div>
       </div>

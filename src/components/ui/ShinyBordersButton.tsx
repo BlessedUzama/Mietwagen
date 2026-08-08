@@ -21,7 +21,7 @@ export const ShinyBordersButton: React.FC<ShinyBordersButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 active:scale-[0.98]';
+    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 active:scale-[0.98] whitespace-nowrap';
 
   const variantStyles = {
     primary:
@@ -58,8 +58,8 @@ export const ShinyBordersButton: React.FC<ShinyBordersButtonProps> = ({
       {/* Animated Light Sweep Effect */}
       <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out pointer-events-none" />
 
-      {icon && <span className="relative z-10 transition-transform duration-300 group-hover:scale-110">{icon}</span>}
-      <span className="relative z-10">{children}</span>
+      {icon && <span className="relative z-10 shrink-0 transition-transform duration-300 group-hover:scale-110">{icon}</span>}
+      <span className="relative z-10 inline-flex items-center gap-1.5 whitespace-nowrap">{children}</span>
     </motion.button>
   );
 };
