@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Navigation, Calendar, Shield, ArrowRight, MessageSquare, Users, Briefcase } from 'lucide-react';
+import { MapPin, Navigation, Calendar, ArrowRight, MessageSquare, Users, Briefcase } from 'lucide-react';
 import { ShinyBordersButton } from '../ui/ShinyBordersButton';
-import { POPULAR_ROUTES, VEHICLE_TIERS, calculateFare } from '../../utils/fareCalculator';
+import { POPULAR_ROUTES, VEHICLE_TIERS } from '../../utils/fareCalculator';
 import type { VehicleTier } from '../../utils/fareCalculator';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -26,7 +26,6 @@ export const RideEstimator: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState<'electric' | 'suv' | 'van7'>('electric');
   const [pickupDate, setPickupDate] = useState<string>(getInitialLocalDateTime);
 
-  const fareResult = calculateFare(selectedRouteId, selectedTier);
   const activeRoute = POPULAR_ROUTES.find((r) => r.id === selectedRouteId);
 
   const handleSelectRoute = (routeId: string) => {
@@ -38,7 +37,7 @@ export const RideEstimator: React.FC = () => {
   };
 
   const currentTierObj: VehicleTier =
-    VEHICLE_TIERS.find((t) => t.id === selectedTier) || VEHICLE_TIERS[0];
+    VEHICLE_TIERS.find((tier) => tier.id === selectedTier) || VEHICLE_TIERS[0];
 
   const handleWhatsAppBooking = () => {
     const destinationName = activeRoute
@@ -56,7 +55,6 @@ export const RideEstimator: React.FC = () => {
 🏁 Ziel: ${destinationName}
 📅 Datum/Zeit: ${dateText}
 🚘 Fahrzeug: ${tierName} (${currentTierObj.sampleModel})
-💰 Festpreis: ca. €${fareResult.fare}
 
 Bitte bestätigen Sie meine Anfrage. Danke!`;
 
@@ -70,7 +68,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
       <div className="absolute -inset-4 rounded-[32px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600/25 via-purple-600/15 to-transparent pointer-events-none transform-gpu contain-paint -z-10" />
 
       <div className="p-6 sm:p-8 bg-white/95 dark:bg-[#0B1220]/95 text-slate-900 dark:text-white rounded-[23px] space-y-6 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
-        {/* Header Title & Live Badge */}
+        {/* Header Title & Status Badge */}
         <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800/80">
           <div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
@@ -83,11 +81,11 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-            Live Fare
+            {language === 'de' ? 'Direkte Buchung' : 'Direct Booking'}
           </span>
         </div>
 
-        {/* Quick Destination Chips - Vibrant Purple & Indigo Gradient */}
+        {/* Quick Destination Chips */}
         <div className="space-y-2">
           <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {t('hero.quickLocationsHeader')}
@@ -148,7 +146,7 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
         </div>
 
-        {/* Vehicle Class Switcher Tabs - Vibrant Purple Gradient Cards */}
+        {/* Vehicle Class Switcher Tabs */}
         <div className="space-y-2">
           <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             {t('hero.vehicleLabel')}
@@ -183,26 +181,12 @@ Bitte bestätigen Sie meine Anfrage. Danke!`;
           </div>
         </div>
 
-        {/* Price Output & Emerald Conversion Box */}
-        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-left space-y-1">
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium block">
-              {t('hero.estimatedFare')}
-            </span>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-slate-900 dark:text-white">€{fareResult.fare}</span>
-              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                <Shield className="w-3 h-3" /> {t('hero.fixedPriceTag')}
-              </span>
-            </div>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">
-              {t('hero.fareCalcDetails', { km: fareResult.km, mins: fareResult.mins })}
-            </p>
-          </div>
-
+        {/* Full-Width Primary WhatsApp CTA Container */}
+        <div className="pt-2">
           <ShinyBordersButton
             variant="whatsapp"
             size="lg"
+            fullWidth
             onClick={handleWhatsAppBooking}
             className="observe-wa-btn"
             icon={<MessageSquare className="w-5 h-5 text-white" />}
