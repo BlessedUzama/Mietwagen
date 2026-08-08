@@ -47,14 +47,31 @@ export const RideEstimator: React.FC = () => {
       : 'Frankfurt am Main';
 
     const pickupText = pickup.trim() || (language === 'de' ? 'Frankfurt Zentrum' : 'Frankfurt Downtown');
-    const dateText = pickupDate || (language === 'de' ? 'So schnell wie möglich' : 'As soon as possible');
     const tierName = t(currentTierObj.nameKey);
+
+    let formattedDate = pickupDate ? pickupDate.replace('T', ' ') : (language === 'de' ? 'So schnell wie möglich' : 'As soon as possible');
+    try {
+      if (pickupDate) {
+        const dateObj = new Date(pickupDate);
+        if (!isNaN(dateObj.getTime())) {
+          formattedDate = dateObj.toLocaleString(language === 'de' ? 'de-DE' : 'en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+          });
+        }
+      }
+    } catch {
+      formattedDate = pickupDate.replace('T', ' ');
+    }
 
     const textPayload = `${t('whatsapp.greeting')}
 
 📍 *${t('whatsapp.pickup')}:* ${pickupText}
 🏁 *${t('whatsapp.destination')}:* ${destinationName}
-📅 *${t('whatsapp.date')}:* ${dateText}
+📅 *${t('whatsapp.date')}:* ${formattedDate}
 🚘 *${t('whatsapp.vehicle')}:* ${tierName} (${currentTierObj.sampleModel})
 
 ${t('whatsapp.pleaseConfirm')}`;
