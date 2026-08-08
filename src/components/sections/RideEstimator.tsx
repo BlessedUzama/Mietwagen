@@ -50,13 +50,14 @@ export const RideEstimator: React.FC = () => {
     const dateText = pickupDate || (language === 'de' ? 'So schnell wie möglich' : 'As soon as possible');
     const tierName = t(currentTierObj.nameKey);
 
-    const textPayload = `Hallo Obazee Clement! Ich möchte eine Fahrt buchen:
-📍 Abholung: ${pickupText}
-🏁 Ziel: ${destinationName}
-📅 Datum/Zeit: ${dateText}
-🚘 Fahrzeug: ${tierName} (${currentTierObj.sampleModel})
+    const textPayload = `${t('whatsapp.greeting')}
 
-Bitte bestätigen Sie meine Anfrage. Danke!`;
+📍 *${t('whatsapp.pickup')}:* ${pickupText}
+🏁 *${t('whatsapp.destination')}:* ${destinationName}
+📅 *${t('whatsapp.date')}:* ${dateText}
+🚘 *${t('whatsapp.vehicle')}:* ${tierName} (${currentTierObj.sampleModel})
+
+${t('whatsapp.pleaseConfirm')}`;
 
     const whatsappUrl = `https://wa.me/4915210236967?text=${encodeURIComponent(textPayload)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');

@@ -219,5 +219,13 @@
     "imprint": "Impressum (§ 5 DDG)",
     "privacy": "Datenschutzerklärung (DSGVO)",
     "terms": "AGB"
+  },
+  "whatsapp": {
+    "greeting": "Hallo Obazee Clement, ich möchte eine Fahrt anfragen.",
+    "pickup": "Abholort",
+    "destination": "Ziel",
+    "date": "Datum & Uhrzeit",
+    "vehicle": "Fahrzeugklasse",
+    "pleaseConfirm": "Bitte bestätigen Sie meine Anfrage. Danke!"
   }
 }

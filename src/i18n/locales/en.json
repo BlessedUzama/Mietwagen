@@ -219,5 +219,13 @@
     "imprint": "Legal Notice (Impressum)",
     "privacy": "Privacy Policy (GDPR)",
     "terms": "Terms & Conditions"
+  },
+  "whatsapp": {
+    "greeting": "Hello Obazee Clement, I would like to request a ride.",
+    "pickup": "Pickup Location",
+    "destination": "Destination",
+    "date": "Date & Time",
+    "vehicle": "Vehicle Class",
+    "pleaseConfirm": "Please confirm my request. Thank you!"
   }
 }
