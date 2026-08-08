@@ -200,13 +200,13 @@ ${t('whatsapp.pleaseConfirm')}`;
         </div>
 
         {/* Full-Width Primary WhatsApp CTA Container */}
-        <div className="pt-2">
+        <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-center">
           <ShinyBordersButton
             variant="whatsapp"
             size="lg"
             fullWidth
             onClick={handleWhatsAppBooking}
-            className="observe-wa-btn"
+            className="observe-wa-btn w-full justify-center"
             icon={<MessageSquare className="w-5 h-5 text-white" />}
           >
             <span>{t('hero.ctaWhatsApp')}</span>

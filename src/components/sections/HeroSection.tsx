@@ -62,7 +62,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             </div>
 
             {/* Hero CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-4 lg:hidden">
               {/* WhatsApp Mandatory Emerald CTA */}
               <a
                 href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20in%20Frankfurt%20anfragen."
