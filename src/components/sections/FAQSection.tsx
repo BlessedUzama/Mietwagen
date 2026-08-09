@@ -26,7 +26,7 @@ export const FAQSection: React.FC = () => {
   };
 
   const handleAskQuestion = () => {
-    const textPayload = 'Hallo Obazee Clement! Ich habe eine Frage zu Ihren Mietwagen-Services in Frankfurt:';
+    const textPayload = t('whatsapp.genericGreeting');
     const whatsappUrl = `https://wa.me/4915210236967?text=${encodeURIComponent(textPayload)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };

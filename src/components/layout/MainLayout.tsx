@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import { FloatingWhatsApp } from '../common/FloatingWhatsApp';
+
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -32,10 +32,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {children || <Outlet />}
       </main>
 
-      {/* Floating Action Elements (WhatsApp Widget) */}
-      <aside className="z-40 relative">
-        <FloatingWhatsApp />
-      </aside>
+
 
       {/* Footer Section */}
       <footer className="z-10 relative mt-auto">

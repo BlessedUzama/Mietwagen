@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20anfragen."
+                  href={`https://wa.me/4915210236967?text=${encodeURIComponent(t('whatsapp.genericGreeting'))}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="observe-wa-btn hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200 flex items-center gap-2"

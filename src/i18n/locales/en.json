@@ -222,6 +222,8 @@
   },
   "whatsapp": {
     "greeting": "Hello Obazee Clement, I would like to request a ride.",
+    "genericGreeting": "Hello Obazee Clement, I would like to make an inquiry.",
+    "fleetRequest": "Hello Obazee Clement! I would like to request a ride in the \"{{vehicle}}\" class.",
     "pickup": "Pickup Location",
     "destination": "Destination",
     "date": "Date & Time",

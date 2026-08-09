@@ -52,7 +52,7 @@ export const FleetShowcase: React.FC = () => {
   const { t } = useTranslation();
 
   const handleBookVehicle = (vName: string) => {
-    const textPayload = `Hallo Obazee Clement! Ich möchte eine Fahrt in der Klasse "${vName}" anfragen.`;
+    const textPayload = t('whatsapp.fleetRequest', { vehicle: vName });
     const whatsappUrl = `https://wa.me/4915210236967?text=${encodeURIComponent(textPayload)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };

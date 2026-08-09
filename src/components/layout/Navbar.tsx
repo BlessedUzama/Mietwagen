@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
             </a>
 
             {/* WhatsApp Booking Button */}
-            <a href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20anfragen." target="_blank" rel="noopener noreferrer">
+            <a href={`https://wa.me/4915210236967?text=${encodeURIComponent(t('whatsapp.genericGreeting'))}`} target="_blank" rel="noopener noreferrer">
               <ShinyBordersButton variant="whatsapp" size="sm" icon={<MessageSquare className="w-3.5 h-3.5 text-white" />}>
                 WhatsApp
               </ShinyBordersButton>
@@ -199,7 +199,7 @@ export const Navbar: React.FC = () => {
               </ShinyBordersButton>
             </a>
             <a
-              href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20anfragen."
+              href={`https://wa.me/4915210236967?text=${encodeURIComponent(t('whatsapp.genericGreeting'))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
