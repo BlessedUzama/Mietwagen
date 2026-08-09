@@ -10,7 +10,6 @@ interface VehicleCardData {
   subtitleKey: string;
   badgeKey: string;
   icon: React.ReactNode;
-  sampleModel: string;
   seats: number;
   luggage: number;
   featuresKey: string;
@@ -23,7 +22,6 @@ const FLEET_CARDS: VehicleCardData[] = [
     subtitleKey: 'fleetShowcase.electric.subtitle',
     badgeKey: 'fleetShowcase.electric.badge',
     icon: <Zap className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
-    sampleModel: 'Hyundai Ioniq 5',
     seats: 4,
     luggage: 2,
     featuresKey: 'fleetShowcase.electric.features',
@@ -34,8 +32,7 @@ const FLEET_CARDS: VehicleCardData[] = [
     subtitleKey: 'fleetShowcase.suv.subtitle',
     badgeKey: 'fleetShowcase.suv.badge',
     icon: <Car className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
-    sampleModel: 'Volkswagen Touareg',
-    seats: 4,
+    seats: 6,
     luggage: 4,
     featuresKey: 'fleetShowcase.suv.features',
   },
@@ -45,8 +42,7 @@ const FLEET_CARDS: VehicleCardData[] = [
     subtitleKey: 'fleetShowcase.van7.subtitle',
     badgeKey: 'fleetShowcase.van7.badge',
     icon: <Users2 className="w-5 h-5 text-blue-500 dark:text-blue-400" />,
-    sampleModel: 'BMW 2 Series Gran Tourer',
-    seats: 7,
+    seats: 8,
     luggage: 6,
     featuresKey: 'fleetShowcase.van7.features',
   },
@@ -90,14 +86,14 @@ export const FleetShowcase: React.FC = () => {
               className="p-8 rounded-3xl bg-white dark:bg-[#0B1220] border border-slate-200 dark:border-slate-800 shadow-xl hover:shadow-2xl flex flex-col justify-between transition-all duration-300"
             >
               <div className="space-y-6">
-                {/* Header Badge & Sample Model */}
+                {/* Header Badge & Capacity Pill */}
                 <div className="flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold">
                     {card.icon}
                     <span>{t(card.badgeKey)}</span>
                   </span>
                   <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">
-                    {card.sampleModel}
+                    {t('fleetShowcase.upToSeats', { seats: card.seats })}
                   </span>
                 </div>
 

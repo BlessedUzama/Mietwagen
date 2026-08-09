@@ -72,7 +72,7 @@
     "bookBtn": "{{title}} Buchen",
     "electric": {
       "title": "Premium Electric",
-      "subtitle": "Lautlose, emissionsfreie Elektro-Limousine (Hyundai Ioniq 5) für Stadt & Flughafen.",
+      "subtitle": "Lautlose, emissionsfreie Elektro-Limousine für Stadt & Flughafen.",
       "badge": "100% Eco Electric",
       "features": [
         "100% Emissionsfrei & flüsterleise",
@@ -83,21 +83,21 @@
     },
     "suv": {
       "title": "Premium SUV",
-      "subtitle": "Erstklassiger Allrad-Komfort (Volkswagen Touareg) mit erweitertem Kofferraum.",
+      "subtitle": "Erstklassiger Allrad-Komfort mit erweitertem Kofferraum.",
       "badge": "Oberklasse & Allrad",
       "features": [
         "Luxuriöser Allrad-Komfort",
-        "Bis zu 4 große Reisekoffer",
+        "Bis zu 6 Passagiere & 4 Koffer",
         "Panorama-Dach & Lederausstattung",
         "Höchste Sicherheit bei jedem Wetter"
       ]
     },
     "van7": {
-      "title": "Comfort 7–Seater",
-      "subtitle": "Maximales Raumangebot (BMW 2er Gran Tourer) für Gruppen, Delegationen & Großgepäck.",
+      "title": "Comfort Van",
+      "subtitle": "Maximales Raumangebot für Gruppen, Delegationen & Großgepäck.",
       "badge": "Großraum & Gruppe",
       "features": [
-        "Bis zu 7 Fahrgäste",
+        "Bis zu 8 Fahrgäste",
         "Großzügiger Ladebereich für 6 Koffer",
         "Klimaautomatik für Fondpassagiere",
         "Perfekt für Gruppen & Flughafen FRA"
@@ -136,7 +136,7 @@
     "q2": "Gibt es versteckte Kosten oder Zusatzgebühren bei Stau?",
     "a2": "Nein. Alle angegebenen Fahrpreise sind transparente Festpreise. Bei Verkehrsbehinderungen oder Stau im Raum Frankfurt bleibt Ihr Preis zu 100 % garantiert unverändert.",
     "q3": "Wie viel Gepäck passt in die Fahrzeuge?",
-    "a3": "Unsere Premium Electric Limousine fasst 2 Koffer, der Premium SUV fasst 4 Koffer und unser Comfort 7-Sitzer bietet Platz für bis zu 6 große Koffer.",
+    "a3": "Unsere Premium Electric Limousine fasst 4 Personen & 2 Koffer, der Premium SUV bietet Platz für 6 Personen & 4 Koffer und unser Comfort Van fasst bis zu 8 Fahrgäste & 6 große Koffer.",
     "q4": "Welche Zahlungsmöglichkeiten stehen zur Verfügung?",
     "a4": "Sie bezahlen flexibel vor Ort beim Fahrer in bar, mit allen gängigen EC- und Kreditkarten (inkl. Apple Pay / Google Pay) oder vorab direkt per Banküberweisung / PayPal.",
     "q5": "Wie kann ich meine Buchung ändern oder stornieren?",

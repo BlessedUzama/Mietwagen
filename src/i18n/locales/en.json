@@ -72,7 +72,7 @@
     "bookBtn": "Book {{title}}",
     "electric": {
       "title": "Premium Electric",
-      "subtitle": "Whisper-quiet, zero-emission electric sedan (Hyundai Ioniq 5) for city & airport.",
+      "subtitle": "Whisper-quiet, zero-emission electric sedan for city & airport.",
       "badge": "100% Eco Electric",
       "features": [
         "100% Zero-emission & quiet",
@@ -83,21 +83,21 @@
     },
     "suv": {
       "title": "Premium SUV",
-      "subtitle": "First-class all-wheel drive comfort (Volkswagen Touareg) with enlarged luggage space.",
+      "subtitle": "First-class all-wheel drive comfort with enlarged luggage space.",
       "badge": "Executive All-Wheel Drive",
       "features": [
         "Luxurious AWD Comfort",
-        "Holds up to 4 Large Suitcases",
+        "Up to 6 Passengers & 4 Suitcases",
         "Panoramic Sunroof & Leather Interior",
         "Maximum Safety in All Weather Conditions"
       ]
     },
     "van7": {
-      "title": "Comfort 7–Seater",
-      "subtitle": "Maximum space & comfort (BMW 2 Series Gran Tourer) for groups, delegations & heavy bags.",
+      "title": "Comfort Van",
+      "subtitle": "Maximum space & comfort for groups, delegations & heavy bags.",
       "badge": "Spacious Group Van",
       "features": [
-        "Up to 7 Passengers",
+        "Up to 8 Passengers",
         "Generous Cargo Area for 6 Suitcases",
         "Rear Passenger Climate Control",
         "Ideal for Groups & FRA Airport"
@@ -136,7 +136,7 @@
     "q2": "Are there any hidden costs or extra charges for traffic jams?",
     "a2": "No. All stated fares are transparent fixed prices. If there is traffic or delay in the Frankfurt area, your price remains 100% guaranteed.",
     "q3": "How much luggage fits in the vehicles?",
-    "a3": "Our Premium Electric Sedan holds 2 suitcases, the Premium SUV holds 4 suitcases, and our Comfort 7-Seater offers space for up to 6 large suitcases.",
+    "a3": "Our Premium Electric Sedan holds 4 passengers & 2 suitcases, the Premium SUV holds 6 passengers & 4 suitcases, and our Comfort Van offers space for up to 8 passengers & 6 large suitcases.",
     "q4": "What payment methods are accepted?",
     "a4": "You pay flexibly on-site to the driver in cash, with any major debit/credit card (including Apple Pay / Google Pay), or in advance via bank transfer / PayPal.",
     "q5": "Can I cancel or change my booking at short notice?",

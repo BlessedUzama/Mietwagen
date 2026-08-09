@@ -72,7 +72,7 @@ export const RideEstimator: React.FC = () => {
 📍 *${t('whatsapp.pickup')}:* ${pickupText}
 🏁 *${t('whatsapp.destination')}:* ${destinationName}
 📅 *${t('whatsapp.date')}:* ${formattedDate}
-🚘 *${t('whatsapp.vehicle')}:* ${tierName} (${currentTierObj.sampleModel})
+🚘 *${t('whatsapp.vehicle')}:* ${tierName}
 
 ${t('whatsapp.pleaseConfirm')}`;
 
@@ -184,7 +184,7 @@ ${t('whatsapp.pleaseConfirm')}`;
                   }`}
                 >
                   <span className="text-xs font-bold">{t(tier.nameKey)}</span>
-                  <span className="text-[10px] opacity-80 mt-0.5">{tier.sampleModel}</span>
+                  <span className="text-[10px] opacity-80 mt-0.5">{t('fleetShowcase.upToSeats', { seats: tier.seats })}</span>
                   <div className="flex items-center gap-2 mt-1 text-[11px] opacity-90">
                     <span className="flex items-center gap-0.5">
                       <Users className="w-3 h-3" /> {tier.seats}
