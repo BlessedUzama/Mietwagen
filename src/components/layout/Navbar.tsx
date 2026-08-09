@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Phone, Menu, X, Globe, MessageSquare } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { useLanguage } from '../../context/LanguageContext';
@@ -33,10 +32,10 @@ export const Navbar: React.FC = () => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = 'unset';
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = 'unset';
     };
   }, [mobileMenuOpen]);
 
@@ -69,7 +68,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl transform-gpu border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
+    <nav className="w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300 relative z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -154,7 +153,8 @@ export const Navbar: React.FC = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 dark:text-slate-200 focus:outline-none"
+              className="p-2 text-slate-700 dark:text-slate-200 focus:outline-none cursor-pointer"
+              aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -162,47 +162,55 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl px-4 pt-2 pb-6 space-y-3"
-          >
+      {/* Fixed Full-Screen Viewport Overlay for Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 h-[100dvh] w-screen z-[100] bg-[#0B1E3D] text-white p-6 flex flex-col justify-between overflow-y-auto">
+          {/* Top Bar with Brand Logo & Close Button */}
+          <div className="flex items-center justify-between pb-4 border-b border-white/10">
+            <BrandLogo />
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2 text-slate-300 hover:text-white rounded-lg bg-white/10 cursor-pointer"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Nav Links Container */}
+          <div className="flex flex-col space-y-4 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
+                className="text-xl font-bold text-slate-100 hover:text-indigo-400 transition-colors py-2 border-b border-white/5"
               >
                 {link.label}
               </a>
             ))}
+          </div>
 
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
-              <a href="tel:015210236967" className="w-full">
-                <ShinyBordersButton variant="primary" fullWidth icon={<Phone className="w-4 h-4" />}>
-                  {t('nav.callNow')} (015210236967)
-                </ShinyBordersButton>
-              </a>
-              <a
-                href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20anfragen."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full"
-              >
-                <ShinyBordersButton variant="whatsapp" fullWidth icon={<MessageSquare className="w-4 h-4" />}>
-                  {t('nav.whatsappRide')}
-                </ShinyBordersButton>
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          {/* Bottom Action Buttons */}
+          <div className="pt-6 border-t border-white/10 flex flex-col gap-3 mt-auto">
+            <a href="tel:015210236967" className="w-full">
+              <ShinyBordersButton variant="outline" fullWidth icon={<Phone className="w-4 h-4 text-indigo-400" />}>
+                0152 10236967
+              </ShinyBordersButton>
+            </a>
+            <a
+              href="https://wa.me/4915210236967?text=Hallo%20Obazee%20Clement,%20ich%20moechte%20eine%20Fahrt%20anfragen."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <ShinyBordersButton variant="whatsapp" fullWidth icon={<MessageSquare className="w-4 h-4 text-white" />}>
+                {t('nav.whatsappRide')}
+              </ShinyBordersButton>
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
