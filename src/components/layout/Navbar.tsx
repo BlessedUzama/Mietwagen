@@ -164,13 +164,13 @@ export const Navbar: React.FC = () => {
 
       {/* Fixed Full-Screen Viewport Overlay for Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 h-[100dvh] w-screen z-[100] bg-[#0B1E3D] text-white p-6 flex flex-col justify-between overflow-y-auto">
+        <div className="fixed inset-0 h-[100dvh] w-screen z-[100] bg-white dark:bg-[#0B1E3D] text-slate-900 dark:text-white p-6 flex flex-col justify-between overflow-y-auto transition-colors duration-300">
           {/* Top Bar with Brand Logo & Close Button */}
-          <div className="flex items-center justify-between pb-4 border-b border-white/10">
+          <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10">
             <BrandLogo />
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 text-slate-300 hover:text-white rounded-lg bg-white/10 cursor-pointer"
+              className="p-2 text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 dark:text-slate-300 dark:hover:text-white dark:bg-white/10 dark:hover:bg-white/20 rounded-lg cursor-pointer transition-colors"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />
@@ -184,7 +184,7 @@ export const Navbar: React.FC = () => {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className="text-xl font-bold text-slate-100 hover:text-indigo-400 transition-colors py-2 border-b border-white/5"
+                className="text-xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-indigo-400 transition-colors py-2 border-b border-slate-100 dark:border-white/5"
               >
                 {link.label}
               </a>
@@ -192,9 +192,9 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Bottom Action Buttons */}
-          <div className="pt-6 border-t border-white/10 flex flex-col gap-3 mt-auto">
+          <div className="pt-6 border-t border-slate-200 dark:border-white/10 flex flex-col gap-3 mt-auto">
             <a href="tel:015210236967" className="w-full">
-              <ShinyBordersButton variant="outline" fullWidth icon={<Phone className="w-4 h-4 text-indigo-400" />}>
+              <ShinyBordersButton variant="outline" fullWidth icon={<Phone className="w-4 h-4 text-blue-500 dark:text-indigo-400" />}>
                 0152 10236967
               </ShinyBordersButton>
             </a>
